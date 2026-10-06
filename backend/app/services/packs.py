@@ -97,6 +97,38 @@ def preview(db: Session) -> dict:
     }
 
 
+def missing(db: Session) -> list[dict]:
+    """Jeux sans vidéo ou sans fiche que le paquet ne couvre pas : ceux qu'il reste à préparer."""
+    pack, index = load_pack(), _owned_by_name(db)
+    covered = {g.id for entry in pack.games if (g := _match(entry, index)) is not None}
+    result = []
+    for game in sorted(set(index.values()), key=lambda g: g.search_text):
+        kinds = {s.kind for s in game.rule_sheets}
+        lacks = [
+            label
+            for label, missing_part in (
+                ("vidéo", not game.videos),
+                ("règles simplifiées", "summary" not in kinds),
+                ("fiche débutants", "beginner_guide" not in kinds),
+            )
+            if missing_part
+        ]
+        if game.id in covered or not lacks:
+            continue
+        result.append(
+            {
+                "id": game.id,
+                "name": game.name_fr,
+                "name_original": game.name_original,
+                "year": game.year,
+                "min_players": game.min_players,
+                "max_players": game.max_players,
+                "lacks": lacks,
+            }
+        )
+    return result
+
+
 def apply(db: Session) -> dict:
     """Ajoute les vidéos et fiches manquantes. Les fiches arrivent comme brouillons à relire."""
     pack, index = load_pack(), _owned_by_name(db)

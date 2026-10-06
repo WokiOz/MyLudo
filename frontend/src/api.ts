@@ -153,6 +153,16 @@ export interface PackPreview {
   games: PackEntry[]
 }
 
+export interface MissingGame {
+  id: number
+  name: string
+  name_original: string | null
+  year: number | null
+  min_players: number | null
+  max_players: number | null
+  lacks: string[]
+}
+
 export interface PackResult {
   games: number
   videos_added: number
@@ -275,6 +285,7 @@ export const api = {
     request<{ content_md: string }>('POST', `/games/${id}/rules/${kind}/draft`),
 
   pack: () => request<PackPreview>('GET', '/pack'),
+  packMissing: () => request<MissingGame[]>('GET', '/pack/missing'),
   applyPack: () => request<PackResult>('POST', '/pack/apply'),
 
   importCsv: (text: string) => request<ImportResult>('POST', '/import/csv', text, true),

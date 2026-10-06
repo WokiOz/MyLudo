@@ -91,3 +91,34 @@ def test_pack_routes_need_login(make_client):
     client = make_client("secret")
     assert client.get("/api/pack").status_code == 401
     assert client.post("/api/pack/apply").status_code == 401
+
+
+def test_missing_lists_games_the_pack_does_not_cover(client):
+    make(client, "Catan")  # couvert par le paquet
+    make(client, "Le jeu de Paul", year=2021, min_players=2, max_players=5)
+    make(client, "Déjà complet")
+    done = client.get("/api/games").json()
+    complete = next(g for g in done if g["name_fr"] == "Déjà complet")
+    for kind in ("summary", "beginner_guide"):
+        client.put(f"/api/games/{complete['id']}/rules/{kind}", json={"content_md": "Texte"})
+    app.dependency_overrides[get_optional_youtube_client] = lambda: None
+    client.post(f"/api/games/{complete['id']}/videos", json={"url": "https://youtu.be/AAAAAAAAAAA"})
+
+    missing = client.get("/api/pack/missing").json()
+    assert [g["name"] for g in missing] == ["Le jeu de Paul"]
+    paul = missing[0]
+    assert (paul["year"], paul["min_players"], paul["max_players"]) == (2021, 2, 5)
+    assert paul["lacks"] == ["vidéo", "règles simplifiées", "fiche débutants"]
+
+
+def test_missing_shrinks_as_the_user_writes_content(client):
+    game = make(client, "Le jeu de Paul")
+    client.put(f"/api/games/{game['id']}/rules/summary", json={"content_md": "Résumé"})
+    assert client.get("/api/pack/missing").json()[0]["lacks"] == ["vidéo", "fiche débutants"]
+
+
+def test_missing_ignores_sold_games_and_needs_login(client, make_client):
+    make(client, "Vendu", status="sold")
+    assert client.get("/api/pack/missing").json() == []
+    secured = make_client("secret")
+    assert secured.get("/api/pack/missing").status_code == 401

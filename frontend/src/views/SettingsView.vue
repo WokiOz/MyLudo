@@ -1,7 +1,14 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { api, type ImportResult, type PackPreview, type PackResult, type Status } from '../api'
+import {
+  api,
+  type ImportResult,
+  type MissingGame,
+  type PackPreview,
+  type PackResult,
+  type Status,
+} from '../api'
 import { authState } from '../auth'
 
 const router = useRouter()
@@ -11,11 +18,14 @@ const error = ref('')
 const busy = ref(false)
 const pack = ref<PackPreview | null>(null)
 const packResult = ref<PackResult | null>(null)
+const missing = ref<MissingGame[]>([])
+const copied = ref(false)
 
 onMounted(async () => {
   try {
     status.value = await api.status()
     pack.value = await api.pack()
+    missing.value = await api.packMissing()
   } catch (e) {
     error.value = (e as Error).message
   }
@@ -47,10 +57,34 @@ async function applyPack() {
   try {
     packResult.value = await api.applyPack()
     pack.value = await api.pack()
+    missing.value = await api.packMissing()
   } catch (e) {
     error.value = (e as Error).message
   } finally {
     busy.value = false
+  }
+}
+
+const missingText = computed(() =>
+  missing.value
+    .map((g) => {
+      const details = [
+        g.year,
+        g.min_players && g.max_players ? `${g.min_players}–${g.max_players} joueurs` : '',
+      ].filter(Boolean)
+      const original = g.name_original && g.name_original !== g.name ? ` / ${g.name_original}` : ''
+      return `- ${g.name}${original}${details.length ? ` (${details.join(', ')})` : ''}`
+    })
+    .join('\n'),
+)
+
+async function copyMissing() {
+  try {
+    await navigator.clipboard.writeText(missingText.value)
+    copied.value = true
+  } catch {
+    copied.value = false
+    error.value = 'Copie impossible : sélectionne le texte de la liste à la main.'
   }
 }
 
@@ -125,6 +159,15 @@ const yesNo = (on: boolean) => (on ? 'Configuré' : 'Non configuré')
           </li>
         </ul>
       </details>
+      <div v-if="missing.length" class="stack">
+        <h3>{{ missing.length }} jeu(x) à préparer</h3>
+        <p class="muted small">
+          Ces jeux n'ont pas encore de vidéo ou de fiche et ne sont pas dans le paquet. Copie la
+          liste et envoie-la moi : je prépare leurs fiches pour la prochaine version.
+        </p>
+        <textarea readonly rows="5" :value="missingText" aria-label="Liste des jeux à préparer"></textarea>
+        <button @click="copyMissing">{{ copied ? 'Liste copiée' : 'Copier la liste' }}</button>
+      </div>
       <p class="muted small">
         Les fiches arrivent comme brouillons à relire : elles sont écrites sans le livret sous les
         yeux, vérifie-les avant de t'en servir. Ce que tu as déjà écrit n'est jamais remplacé, et

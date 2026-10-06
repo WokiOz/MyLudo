@@ -29,7 +29,8 @@ Chaque étape est livrable et utilisable seule.
 - [x] Liens YouTube sans clé : titre automatique et boutons de recherche préremplie
 - [x] Paquet de 29 jeux courants : vidéo LudoChrono vérifiée, règles simplifiées et fiche débutants, ajoutés en un clic dans Réglages
 - [ ] Relire les fiches du paquet avec les livrets et corriger les chiffres signalés « à vérifier »
-- [ ] Étendre le paquet aux autres jeux de la ludothèque (liste à fournir)
+- [x] Liste des jeux à préparer dans Réglages, avec bouton pour la copier
+- [ ] Étendre le paquet aux autres jeux de la ludothèque (à partir de cette liste)
 - [ ] Vérifier la recherche YouTube par clé et le brouillon Claude avec de vraies clés (facultatif)
 
 ## Étape 3 — Prix et valeur

@@ -17,6 +17,12 @@ def preview(db: Db) -> dict:
     return packs.preview(db)
 
 
+@router.get("/missing")
+def missing(db: Db) -> list[dict]:
+    """Jeux à préparer : sans vidéo ou sans fiche, et absents du paquet."""
+    return packs.missing(db)
+
+
 @router.post("/apply")
 def apply(db: Db) -> dict:
     return packs.apply(db)

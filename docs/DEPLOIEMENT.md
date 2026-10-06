@@ -43,6 +43,13 @@ en cochant **Re-pull image** (méthode Web editor). Les données restent dans le
 Pour revenir à une version précise, mettre `MYLUDO_TAG` sur un tag `sha-xxxxxxx`
 visible dans l'onglet Packages de GitHub.
 
+## Compléter les règles et vidéos d'un nouveau jeu
+
+1. Ajoute tes jeux dans l'appli.
+2. Dans Réglages, clique sur « Compléter » : les jeux déjà préparés reçoivent leur vidéo et leurs fiches.
+3. Pour les autres, clique sur « Copier la liste » et envoie-la à Claude, qui prépare leurs fiches dans le dépôt.
+4. Une fois la nouvelle version fusionnée, fais « Pull and redeploy » dans Portainer puis clique de nouveau sur « Compléter ».
+
 ## Sauvegarde
 
 Les données tiennent dans un fichier : `/data/myludo.db` du volume `myludo-data`.
