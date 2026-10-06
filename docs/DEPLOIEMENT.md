@@ -23,7 +23,7 @@ Portainer se contente de télécharger l'image : rien n'est compilé sur le serv
    |---|---|
    | `BGG_TOKEN` | Import des fiches BoardGameGeek |
    | `YOUTUBE_API_KEY` | Facultatif : propositions de vidéos dans l'appli. Les liens collés fonctionnent sans clé |
-   | `YOUTUBE_CHANNELS` | Chaînes prioritaires, `Ludochrono` par défaut |
+   | `YOUTUBE_CHANNELS` | Chaînes prioritaires, `Ludovox` par défaut (c'est elle qui publie les LudoChrono) |
    | `ANTHROPIC_API_KEY` | Brouillons de fiches via l'API Claude |
    | `ANTHROPIC_MODEL` | Modèle des brouillons, `claude-opus-5-5` par défaut. `claude-sonnet-5-5` coûte moins cher |
    | `PRICE_SOURCES` | Modules de prix activés, vide par défaut |

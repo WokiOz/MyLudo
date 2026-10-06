@@ -1,0 +1,467 @@
+{
+ "version": 1,
+ "games": [
+  {
+   "name": "Catan",
+   "aliases": [
+    "CATAN",
+    "Les Colons de Catane",
+    "Catane",
+    "The Settlers of Catan",
+    "Catan : Le Jeu de Base"
+   ],
+   "videos": [
+    {
+     "youtube_id": "tvI8eFfm6Bk",
+     "title": "LudoChrono - Les Colons de Catane",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nÊtre le premier à atteindre 10 points de victoire en développant son territoire sur l'île de Catan.\n\n## Mise en place\n- Assembler l'île avec les 19 hexagones de terrain (forêt, pré, champ, colline, montagne et un désert), puis poser les jetons numérotés dessus.\n- Poser le voleur sur le désert.\n- Chaque joueur place 2 colonies et 2 routes, dans l'ordre du tour puis en sens inverse. La deuxième colonie rapporte une ressource de chaque terrain voisin.\n\n## Déroulement d'un tour\n1. Lancer les deux dés : tous les terrains portant ce numéro produisent. Chaque colonie voisine reçoit 1 carte de la ressource, chaque ville en reçoit 2.\n2. Échanger : librement avec les autres joueurs, ou avec la banque (4 cartes identiques contre 1 au choix, moins cher avec un port).\n3. Construire ou acheter, dans l'ordre que l'on veut : une route, une colonie, une ville ou une carte développement. Les coûts sont sur la carte récapitulative.\n\n## Fin de partie et décompte\n- Le premier joueur qui atteint 10 points pendant son tour gagne.\n- Points : 1 par colonie, 2 par ville, 2 pour la route la plus longue (5 tronçons minimum), 2 pour la plus grande armée (3 chevaliers minimum), 1 par carte point de victoire.\n\n## À retenir\n- Une colonie doit être à au moins deux intersections de toute autre colonie ou ville, et reliée à l'une de ses routes.\n- Sur un 7 : personne ne produit, ceux qui ont plus de 7 cartes en défaussent la moitié, le joueur déplace le voleur et prend une carte à un voisin du terrain bloqué.\n- Une carte développement ne se joue pas le tour où on l'achète, et une seule par tour.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 10 minutes\n- Joueurs conseillés : 3 ou 4\n- Matériel à sortir : l'île montée, les cartes ressources triées par type, les dés, la carte des coûts de construction pour chaque joueur\n\n## Expliquer en 5 minutes\n1. Le but : atteindre 10 points en construisant colonies, villes et routes.\n2. Les cinq ressources : chaque type de terrain en produit une.\n3. Le jet de dés : le numéro désigne les terrains qui produisent. Montrer un exemple concret sur l'île.\n4. Ce qu'on peut construire : parcourir la carte des coûts ensemble.\n5. Le voleur et le 7, puis l'échange, qui est le cœur du jeu.\n\n## Aide-mémoire du tour\n- [ ] Lancer les dés et distribuer les ressources\n- [ ] Échanger avec les joueurs ou la banque\n- [ ] Construire ou acheter une carte\n- [ ] Sur un 7 : défausser si plus de 7 cartes, déplacer le voleur\n\n## Erreurs classiques des nouveaux joueurs\n- Oublier la règle de distance entre colonies.\n- Poser une colonie qui n'est reliée à aucune de ses routes.\n- Oublier de défausser sur un 7.\n- Vouloir jouer tout de suite la carte développement qu'on vient d'acheter.\n\n## Partie d'essai conseillée\n- Faire le placement de départ à voix haute ensemble : les numéros 6 et 8 sortent le plus souvent aux dés.\n- Laisser un joueur expérimenté lancer les dés lors des premiers tours pour rappeler qui produit quoi.\n\n## Pour que ça se passe bien\n- Encourager à proposer des échanges : un joueur qui n'échange pas reste bloqué.\n- Rappeler les points en cours à chaque tour pour que chacun voie qui approche des 10.\n"
+  },
+  {
+   "name": "Les Aventuriers du Rail",
+   "aliases": [
+    "Ticket to Ride",
+    "Les Aventuriers du Rail : USA",
+    "Les Aventuriers du Rail USA",
+    "Ticket to Ride : USA"
+   ],
+   "videos": [
+    {
+     "youtube_id": "I-DXXLYl16Q",
+     "title": "LudoChrono - Les aventuriers du rail (Etats Unis)",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nRelier des villes d'Amérique du Nord par des voies ferrées, réaliser ses billets de destination et marquer le plus de points.\n\n## Mise en place\n- Chaque joueur prend 45 wagons de sa couleur et 4 cartes wagon.\n- Cinq cartes wagon sont posées face visible à côté de la pioche.\n- Chaque joueur reçoit 3 billets de destination et en garde au moins 2. Ils restent secrets.\n\n## Déroulement d'un tour\n- Une seule action par tour, au choix parmi les trois suivantes.\n- Piocher 2 cartes wagon, parmi les visibles ou dans la pioche. Une locomotive visible prise seule compte pour les deux cartes.\n- Prendre une route : défausser autant de cartes d'une même couleur que la longueur, poser ses wagons et marquer les points. Une route grise accepte n'importe quelle couleur, les locomotives sont des jokers.\n- Piocher 3 billets de destination et en garder au moins 1.\n\n## Fin de partie et décompte\n- Quand un joueur n'a plus que 2 wagons ou moins à la fin de son tour, chacun joue un dernier tour.\n- On ajoute les points des billets réussis et on retire ceux des billets manqués.\n- Le joueur au plus long chemin continu gagne 10 points.\n\n## À retenir\n- Points d'une route selon sa longueur : 1, 2, 4, 7, 10 ou 15 pour 1 à 6 wagons.\n- À 2 ou 3 joueurs, on ne peut utiliser qu'une des deux voies d'une route double.\n- Garder trop de billets est risqué : un billet manqué fait perdre des points.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 5 minutes\n- Joueurs conseillés : 2 à 5\n- Matériel à sortir : le plateau, les wagons, les cartes wagon, les billets de destination, le marqueur de score\n\n## Expliquer en 5 minutes\n1. Le but : relier des villes pour marquer des points, avec des billets secrets qui donnent un bonus.\n2. Un tour, une action : piocher des cartes, prendre une route ou piocher des billets.\n3. Prendre une route : montrer sur le plateau combien de cartes de la couleur il faut.\n4. Les billets sont secrets et rapportent des points seulement s'ils sont reliés.\n5. La fin de partie se déclenche quand un joueur a presque posé tous ses wagons.\n\n## Aide-mémoire du tour\n- [ ] Choisir une seule action\n- [ ] Piocher des cartes : 2 cartes, ou 1 locomotive visible\n- [ ] Prendre une route avec les bonnes cartes\n- [ ] Ou piocher des billets de destination\n\n## Erreurs classiques des nouveaux joueurs\n- Croire qu'on peut faire deux actions dans le même tour.\n- Garder tous ses billets sans vérifier qu'ils sont réalisables.\n- Oublier que les locomotives visibles ne se piochent qu'une à la fois.\n- Poser les deux voies d'une route double à 2 ou 3 joueurs.\n\n## Partie d'essai conseillée\n- Jouer la première partie à 3 joueurs pour que le plateau reste lisible.\n- Conseiller de garder 2 ou 3 billets au départ.\n\n## Pour que ça se passe bien\n- Rappeler que bloquer une route est permis et fait partie du jeu.\n- Compter les points ensemble en fin de partie, route par route.\n"
+  },
+  {
+   "name": "Les Aventuriers du Rail : Europe",
+   "aliases": [
+    "Ticket to Ride : Europe",
+    "Aventuriers du Rail Europe",
+    "Les Aventuriers du Rail Europe"
+   ],
+   "videos": [
+    {
+     "youtube_id": "QgX8dwbdiug",
+     "title": "LudoChrono - Aventuriers du rail Europe",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nRelier des villes d'Europe par des voies ferrées et réaliser ses billets de destination pour marquer le plus de points.\n\n## Mise en place\n- Chaque joueur prend 45 wagons, 3 gares de sa couleur et 4 cartes wagon.\n- Chaque joueur reçoit un billet long et 3 billets normaux, et en garde au moins 2.\n- Cinq cartes wagon sont posées face visible.\n\n## Déroulement d'un tour\n- Une action par tour : piocher des cartes wagon, prendre une route ou piocher des billets, comme dans la version classique.\n- Les tunnels : après avoir annoncé sa route, on retourne 3 cartes de la pioche. Chaque carte de la couleur jouée, ou locomotive, oblige à ajouter une carte.\n- Les ferries : il faut jouer autant de locomotives que de symboles locomotive sur la route.\n- Les gares : on en pose une dans une ville en défaussant 1, puis 2, puis 3 cartes de même couleur. Elle permet d'emprunter une route voisine pour ses billets.\n\n## Fin de partie et décompte\n- Fin de partie quand un joueur a 2 wagons ou moins à la fin de son tour : chacun joue un dernier tour.\n- Points des routes, billets réussis moins billets manqués, 10 points pour le plus long chemin continu.\n- Chaque gare non posée rapporte 4 points.\n\n## À retenir\n- Les tunnels peuvent coûter plus de cartes que prévu : garder des cartes en réserve.\n- Une gare n'est jamais une route : elle sert seulement à relier ses billets.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 7 minutes\n- Joueurs conseillés : 2 à 5, mieux à 3 ou 4\n- Matériel à sortir : le plateau Europe, les wagons, les gares, les cartes wagon, les billets\n\n## Expliquer en 5 minutes\n1. Le but et les trois actions comme dans la version de base.\n2. Les tunnels : on peut payer plus que prévu, montrer l'exemple avec les 3 cartes retournées.\n3. Les ferries : les locomotives sont obligatoires pour les symboles.\n4. Les gares : un coup de main pour relier un billet, et des points si on ne les utilise pas.\n5. La fin de partie et le chemin le plus long.\n\n## Aide-mémoire du tour\n- [ ] Une seule action par tour\n- [ ] Cartes, route, ou billets\n- [ ] Tunnel : retourner 3 cartes et compléter si besoin\n- [ ] Penser à ses gares avant de manquer un billet\n\n## Erreurs classiques des nouveaux joueurs\n- Oublier que le tunnel peut coûter des cartes en plus.\n- Poser toutes ses gares trop tôt alors qu'elles valent 4 points en fin de partie.\n- Oublier les locomotives sur un ferry.\n\n## Partie d'essai conseillée\n- Si les joueurs connaissent déjà la version classique, n'expliquer que les tunnels, ferries et gares.\n\n## Pour que ça se passe bien\n- Laisser les nouveaux joueurs se tromper sur un tunnel au premier essai : c'est ainsi qu'on retient la règle.\n"
+  },
+  {
+   "name": "Carcassonne",
+   "aliases": [
+    "Carcassonne"
+   ],
+   "videos": [
+    {
+     "youtube_id": "PZwI7PyJ5pk",
+     "title": "LudoChrono - Carcassonne",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nConstruire le paysage autour de Carcassonne en posant des tuiles, et marquer des points en y plaçant ses partisans.\n\n## Mise en place\n- La tuile de départ est posée au centre, les autres tuiles forment une pioche face cachée.\n- Chaque joueur prend 8 partisans de sa couleur, un neuvième sert de marqueur sur la piste de score.\n\n## Déroulement d'un tour\n1. Piocher une tuile et la poser pour qu'elle touche les tuiles déjà posées. Routes avec routes, villes avec villes, prés avec prés.\n2. Poser, si on le souhaite, un seul partisan sur la tuile qu'on vient de poser : chevalier dans une ville, voleur sur une route, moine dans une abbaye, paysan dans un pré.\n3. Marquer les éléments terminés, puis reprendre les partisans qui s'y trouvaient.\n\n## Fin de partie et décompte\n- La partie se termine quand toutes les tuiles sont posées.\n- Ville terminée : 2 points par tuile et 2 par blason. Route terminée : 1 point par tuile. Abbaye terminée : 9 points.\n- En fin de partie, les éléments inachevés rapportent 1 point par tuile.\n- Chaque paysan rapporte 3 points par ville terminée touchant son pré.\n\n## À retenir\n- On ne peut pas poser un partisan sur un élément déjà occupé, même si les tuiles posées plus tard le rejoignent.\n- Les paysans ne reviennent pas avant la fin de la partie.\n- Les points sont marqués dès qu'un élément est terminé.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 5 minutes\n- Joueurs conseillés : 2 à 4\n- Matériel à sortir : la tuile de départ, la pioche de tuiles, les partisans, la piste de score\n\n## Expliquer en 5 minutes\n1. Le but : construire un paysage et marquer des points avec des partisans.\n2. Poser une tuile : les bords doivent se correspondre.\n3. Placer un partisan : quatre rôles, un seul partisan par tour.\n4. Marquer : une ville ou une route terminée rapporte des points tout de suite.\n5. Pour la première partie, ignorer les paysans, c'est le point le plus délicat.\n\n## Aide-mémoire du tour\n- [ ] Piocher et poser une tuile\n- [ ] Poser éventuellement un partisan\n- [ ] Marquer les éléments terminés\n- [ ] Reprendre les partisans libérés\n\n## Erreurs classiques des nouveaux joueurs\n- Poser un partisan sur un élément déjà occupé.\n- Oublier de reprendre ses partisans après avoir marqué.\n- Garder tous ses partisans sans jamais les poser.\n- Mal faire correspondre les bords d'une tuile.\n\n## Partie d'essai conseillée\n- Jouer la première partie sans paysans.\n- Montrer au départ un exemple de ville et de route qui se terminent.\n\n## Pour que ça se passe bien\n- Laisser les joueurs rejouer leur tuile si elle est mal posée avant de lâcher la main.\n- Rappeler qu'on peut perdre des points en voyant la ville de l'autre se terminer sans partisan.\n"
+  },
+  {
+   "name": "Dixit",
+   "aliases": [
+    "Dixit"
+   ],
+   "videos": [
+    {
+     "youtube_id": "imODmr8GqEQ",
+     "title": "LudoChrono - Dixit",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nDonner des indices ni trop évidents ni trop obscurs pour que certains joueurs, mais pas tous, retrouvent votre carte.\n\n## Mise en place\n- Chaque joueur reçoit 6 cartes illustrées. Les pions sont placés au départ de la piste de score.\n\n## Déroulement d'un tour\n1. Le conteur choisit une de ses cartes et annonce un indice : un mot, une phrase, un son. Il pose la carte face cachée.\n2. Chaque autre joueur choisit dans sa main la carte qui correspond le mieux à l'indice et la pose face cachée.\n3. Les cartes sont mélangées et révélées. Chacun, sauf le conteur, vote pour la carte qu'il pense être celle du conteur.\n4. On compte les points, puis chacun pioche une carte. Le conteur change.\n\n## Fin de partie et décompte\n- Si tout le monde ou personne ne trouve la carte du conteur : il marque 0, les autres 2.\n- Sinon : le conteur et ceux qui ont trouvé marquent 3. Chaque joueur marque aussi 1 point par vote reçu sur sa carte.\n- La partie s'arrête quand un joueur atteint 30 points. À 3 joueurs, chacun joue 2 cartes.\n\n## À retenir\n- L'indice doit être juste assez précis.\n- On ne vote jamais pour sa propre carte.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 3 minutes\n- Joueurs conseillés : 4 à 6\n- Matériel à sortir : les cartes, la piste de score, les pions de vote, les pions lapins\n\n## Expliquer en 5 minutes\n1. Le but : faire deviner sa carte à une partie des joueurs seulement.\n2. Le conteur donne un indice et pose une carte.\n3. Les autres posent une carte qui colle à l'indice.\n4. Chacun vote pour la carte qu'il croit être celle du conteur.\n5. Les points : bonne piste, ni trop facile ni trop difficile.\n\n## Aide-mémoire du tour\n- [ ] Le conteur annonce l'indice et pose sa carte\n- [ ] Chacun choisit une carte et la pose\n- [ ] Mélanger, révéler, voter\n- [ ] Marquer, piocher, changer de conteur\n\n## Erreurs classiques des nouveaux joueurs\n- Donner un indice trop évident, ou trop obscur.\n- Voter pour sa propre carte.\n- Oublier de piocher en fin de tour.\n\n## Partie d'essai conseillée\n- Faire une manche en jouant les cartes à voix haute pour expliquer le principe.\n\n## Pour que ça se passe bien\n- Rappeler que l'indice peut être une chanson, une grimace ou un bruit.\n- Féliciter les indices subtils : c'est ce qui fait gagner.\n"
+  },
+  {
+   "name": "Pandémie",
+   "aliases": [
+    "Pandemic",
+    "Pandémie Pandemic"
+   ],
+   "videos": [
+    {
+     "youtube_id": "R0Qcma3g9JI",
+     "title": "LudoChrono - Pandémie (Pandemic)",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nDécouvrir les quatre remèdes avant que les maladies ne submergent le monde. Tous les joueurs gagnent ou perdent ensemble.\n\n## Mise en place\n- Chaque joueur prend un rôle, une carte de référence et des cartes selon le nombre de joueurs.\n- On infecte 9 villes : 3 avec 3 cubes, 3 avec 2 cubes et 3 avec 1 cube.\n- Les cartes épidémie sont glissées dans la pioche des cartes joueur. Plus il y en a, plus la partie est dure.\n- On commence à Atlanta, où se trouve la station de recherche.\n\n## Déroulement d'un tour\n1. Jouer 4 actions : se déplacer, traiter une maladie, construire une station de recherche, partager des connaissances, découvrir un remède.\n2. Piocher 2 cartes joueur. Une carte épidémie déclenche une épidémie.\n3. Infecter : retourner des cartes infection selon le taux d'infection et poser un cube sur chaque ville.\n\n## Fin de partie et décompte\n- Victoire : découvrir les 4 remèdes.\n- Défaite : 8 éclosions, plus de cubes d'une couleur, ou plus de cartes joueur à piocher.\n\n## À retenir\n- Découvrir un remède : 5 cartes de la même couleur, à une station de recherche.\n- Éclosion : à 4 cubes sur une ville, les cubes se propagent aux villes voisines.\n- On a 7 cartes en main au maximum.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 10 minutes\n- Joueurs conseillés : 2 à 4\n- Matériel à sortir : le plateau, les cubes, les cartes joueur et infection, les rôles, les marqueurs\n\n## Expliquer en 5 minutes\n1. On joue tous ensemble contre le jeu.\n2. Chacun a un rôle avec un pouvoir spécial.\n3. Un tour : 4 actions, puis piocher 2 cartes joueur, puis infecter.\n4. Pour gagner : 4 remèdes. Pour perdre : trop d'éclosions, de cubes ou de cartes épuisées.\n5. Montrer une épidémie sur un exemple.\n\n## Aide-mémoire du tour\n- [ ] 4 actions\n- [ ] Piocher 2 cartes joueur\n- [ ] Infecter des villes\n- [ ] Se coordonner avec les autres joueurs\n\n## Erreurs classiques des nouveaux joueurs\n- Jouer chacun dans son coin au lieu de décider ensemble de la stratégie.\n- Oublier la limite de 7 cartes en main.\n- Oublier de traiter les maladies avant qu'elles éclosent.\n- Laisser un joueur décider pour tous les autres.\n\n## Partie d'essai conseillée\n- Jouer avec 4 cartes épidémie pour la première partie.\n- Jouer à découvert en expliquant les rôles.\n\n## Pour que ça se passe bien\n- Rappeler que décider ensemble est le principe du jeu.\n- Ne pas laisser un joueur expérimenté jouer à la place des autres.\n"
+  },
+  {
+   "name": "7 Wonders",
+   "aliases": [
+    "7 Wonders (Seconde édition)",
+    "Seven Wonders"
+   ],
+   "videos": [
+    {
+     "youtube_id": "Gnl2iiu9PZ0",
+     "title": "Ludochrono - 7 Wonders (Nouvelle Edition)",
+     "channel": "Ludovox"
+    },
+    {
+     "youtube_id": "0VU6lGR95X0",
+     "title": "LudoChrono - 7 Wonders (Ancienne édition)",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nDévelopper sa cité et sa merveille en trois âges pour marquer le plus de points de victoire.\n\n## Mise en place\n- Chaque joueur reçoit une merveille (plateau), 3 pièces et prend place autour de la table.\n- À chaque âge, chacun reçoit 7 cartes de l'âge en cours.\n\n## Déroulement d'un tour\n1. Chaque joueur choisit une carte de sa main, la pose face cachée, puis tous la révèlent en même temps.\n2. Il la construit en payant son coût, ou la défausse contre 3 pièces, ou s'en sert pour une étape de sa merveille.\n3. Les cartes restantes passent au voisin. Le sens de passage change à chaque âge.\n4. En fin d'âge, on compare sa force militaire avec celle de ses deux voisins.\n\n## Fin de partie et décompte\n- Après le troisième âge, on compte : militaire, pièces, merveille, cartes bleues, commerce, guildes et science.\n- Science : chaque série de symboles identiques rapporte le carré de leur nombre, plus 7 points par ensemble de trois symboles différents.\n\n## À retenir\n- On peut acheter des ressources à ses voisins directs pour 2 pièces chacune.\n- Un bâtiment gratuit peut être posé si on possède déjà son prédécesseur.\n- La force militaire se compare seulement avec ses deux voisins.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 10 minutes\n- Joueurs conseillés : 3 à 7\n- Matériel à sortir : les plateaux de merveilles, les cartes de l'âge en cours, les pièces, les jetons militaires\n\n## Expliquer en 5 minutes\n1. Le but : marquer des points avec sa cité en trois âges.\n2. Chaque tour, on choisit une carte et on passe les autres au voisin.\n3. Poser une carte : la payer avec ses ressources ou en acheter à ses voisins.\n4. Les couleurs des cartes : montrer ce que chacune rapporte.\n5. La guerre avec les deux voisins en fin d'âge.\n\n## Aide-mémoire du tour\n- [ ] Choisir une carte et la poser face cachée\n- [ ] Révéler en même temps\n- [ ] Construire, défausser pour 3 pièces ou avancer sa merveille\n- [ ] Passer les cartes au voisin\n\n## Erreurs classiques des nouveaux joueurs\n- Oublier que les cartes tournent dans un sens différent à chaque âge.\n- Ne pas surveiller sa force militaire.\n- Oublier le chaînage entre les bâtiments.\n\n## Partie d'essai conseillée\n- Jouer le premier âge à cartes ouvertes pour expliquer le chaînage.\n\n## Pour que ça se passe bien\n- Rappeler les couleurs des cartes avec un aide-mémoire à la table.\n- Compter les points tous ensemble la première fois.\n"
+  },
+  {
+   "name": "7 Wonders Duel",
+   "aliases": [
+    "Seven Wonders Duel"
+   ],
+   "videos": [
+    {
+     "youtube_id": "wcHPgvhQWvQ",
+     "title": "LudoChrono - 7 Wonders Duel",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nÀ deux joueurs, construire sa cité pour gagner par suprématie militaire, scientifique, ou aux points.\n\n## Mise en place\n- On pose les cartes de l'âge en cours dans une grille qui forme une pyramide, certaines faces cachées.\n- Chaque joueur reçoit 7 pièces et obtient 4 merveilles, choisies à tour de rôle parmi celles qui sont révélées. Cinq jetons progrès sont posés sur le plateau.\n\n## Déroulement d'un tour\n1. À son tour, on prend une carte libre, c'est-à-dire non recouverte par une autre.\n2. On la construit en payant son coût, ou on la défausse contre des pièces, ou on l'utilise pour construire une étape de merveille.\n3. Les ressources manquantes s'achètent à la banque. Le prix dépend de ce que produit l'adversaire.\n\n## Fin de partie et décompte\n- Victoire militaire : amener le pion jusqu'à la capitale adverse.\n- Victoire scientifique : réunir 6 symboles scientifiques différents.\n- Sinon, après trois âges, le plus de points de victoire gagne.\n\n## À retenir\n- Seules 7 merveilles peuvent être construites en tout.\n- Deux symboles scientifiques identiques donnent un jeton progrès.\n- Une carte posée peut en dévoiler d'autres dans la pyramide.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 8 minutes\n- Joueurs conseillés : 2\n- Matériel à sortir : le plateau, les cartes des trois âges, les jetons progrès et militaires, les pièces\n\n## Expliquer en 5 minutes\n1. On joue à deux et on peut gagner de trois façons.\n2. Prendre une carte libre de la pyramide.\n3. La construire, la défausser pour des pièces ou l'utiliser pour une merveille.\n4. Le militaire, les symboles scientifiques et les points de victoire.\n5. Les jetons progrès et les achats de ressources.\n\n## Aide-mémoire du tour\n- [ ] Prendre une carte libre\n- [ ] La construire, la défausser ou construire une merveille\n- [ ] Surveiller le pion militaire et les symboles scientifiques\n\n## Erreurs classiques des nouveaux joueurs\n- Prendre une carte encore recouverte.\n- Oublier la victoire scientifique ou militaire.\n- Construire une 8e merveille.\n\n## Partie d'essai conseillée\n- Jouer le premier âge en commentant chaque choix.\n\n## Pour que ça se passe bien\n- Rappeler que défausser une carte rapporte des pièces utiles pour la suite.\n"
+  },
+  {
+   "name": "Azul",
+   "aliases": [
+    "Azul"
+   ],
+   "videos": [
+    {
+     "youtube_id": "C9zOpikMSzA",
+     "title": "LudoChrono - Azul",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nDécorer un mur de carreaux de faïence en marquant le plus de points avec des motifs bien placés.\n\n## Mise en place\n- Placer des fabriques au centre : 5 à 2 joueurs, 7 à 3 joueurs, 9 à 4 joueurs, chacune garnie de 4 tuiles.\n- Chaque joueur reçoit un plateau avec 5 lignes de motif à gauche, un mur à droite et une ligne de plancher.\n\n## Déroulement d'un tour\n1. Prendre toutes les tuiles d'une couleur dans une fabrique. Les autres tuiles de la fabrique vont au centre.\n2. Ou prendre toutes les tuiles d'une couleur au centre. Le premier à le faire prend le jeton premier joueur, qui coûte des points.\n3. Poser ces tuiles dans une seule ligne de motif, une couleur par ligne. Les tuiles en trop tombent au plancher.\n4. Quand toutes les tuiles sont prises, on marque. Chaque ligne pleine envoie une tuile sur le mur.\n\n## Fin de partie et décompte\n- La partie s'arrête à la fin de la manche où un joueur complète une ligne horizontale du mur.\n- Bonus : 2 points par ligne complète, 7 par colonne complète, 10 par couleur complète.\n- Les tuiles au plancher font perdre des points.\n\n## À retenir\n- On ne peut pas placer une couleur dans une ligne dont le mur contient déjà cette couleur.\n- Une tuile posée sur le mur marque 1 point, plus 1 par tuile reliée dans la ligne et dans la colonne.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 5 minutes\n- Joueurs conseillés : 2 à 4\n- Matériel à sortir : les plateaux, les fabriques, le sac de tuiles, les marqueurs de score\n\n## Expliquer en 5 minutes\n1. Le but : décorer son mur avec des carreaux.\n2. Prendre toutes les tuiles d'une même couleur.\n3. Les placer dans une ligne de motif.\n4. Quand une ligne est pleine, une tuile va sur le mur.\n5. Le plancher et les points.\n\n## Aide-mémoire du tour\n- [ ] Prendre toutes les tuiles d'une couleur\n- [ ] Les placer dans une ligne de motif\n- [ ] Compter les pertes du plancher\n- [ ] Marquer à la fin de la manche\n\n## Erreurs classiques des nouveaux joueurs\n- Placer une couleur déjà posée sur le mur de cette ligne.\n- Oublier le jeton premier joueur.\n- Oublier que les tuiles en trop vont au plancher.\n\n## Partie d'essai conseillée\n- Jouer à découvert la première manche.\n\n## Pour que ça se passe bien\n- Rappeler qu'il vaut mieux compléter des lignes courtes pour préparer la suite.\n"
+  },
+  {
+   "name": "Codenames",
+   "aliases": [
+    "Code Names"
+   ],
+   "videos": [
+    {
+     "youtube_id": "Bi5q9YuCEQw",
+     "title": "Ludochrono - CodeNames",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nDeux équipes font deviner à leurs coéquipiers des mots sur une grille, grâce à des indices d'un seul mot.\n\n## Mise en place\n- 25 cartes mots sont posées en grille 5 par 5.\n- Chaque équipe désigne un maître-espion qui voit la carte clé secrète.\n- L'équipe qui commence cherche 9 agents, l'autre 8. Il y a aussi 7 passants innocents et 1 assassin.\n\n## Déroulement d'un tour\n1. Le maître-espion donne un indice : un mot et un chiffre qui indique combien de cartes sont liées à cet indice.\n2. Son équipe désigne des cartes, une à une, jusqu'au chiffre annoncé plus un.\n3. Si c'est un agent de l'équipe, elle peut continuer. Un passant ou un agent adverse met fin au tour. L'assassin fait perdre immédiatement.\n\n## Fin de partie et décompte\n- Une équipe gagne dès que tous ses agents sont découverts.\n- Si un joueur touche l'assassin, son équipe perd.\n\n## À retenir\n- L'indice doit être un seul mot, qui n'est pas sur la grille.\n- Le maître-espion ne doit donner aucune autre indication.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 3 minutes\n- Joueurs conseillés : 4 à 8\n- Matériel à sortir : les cartes mots, la carte clé, les cartes agents et le sablier si on le souhaite\n\n## Expliquer en 5 minutes\n1. Deux équipes, chacune avec un maître-espion.\n2. Le maître-espion donne un mot et un chiffre.\n3. L'équipe devine des cartes une à une.\n4. Les passants, les agents adverses et l'assassin.\n5. Le premier à avoir trouvé tous ses agents gagne.\n\n## Aide-mémoire du tour\n- [ ] Le maître-espion donne un mot et un chiffre\n- [ ] L'équipe désigne des cartes\n- [ ] Réagir au résultat de chaque carte\n\n## Erreurs classiques des nouveaux joueurs\n- Donner un indice qui est un mot de la grille.\n- Faire des signes ou des grimaces quand on entend le choix de son équipe.\n- Oublier l'assassin au moment de choisir.\n\n## Partie d'essai conseillée\n- Jouer une première partie avec des indices simples, sans limite de temps.\n\n## Pour que ça se passe bien\n- Laisser les maîtres-espions expérimentés conseiller sans parler.\n"
+  },
+  {
+   "name": "Splendor",
+   "aliases": [
+    "Splendor"
+   ],
+   "videos": [
+    {
+     "youtube_id": "UkfnyT848LU",
+     "title": "Ludochrono - Splendor",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nMarchand de pierres précieuses de la Renaissance : acheter des cartes de développement pour atteindre 15 points de prestige.\n\n## Mise en place\n- Les jetons gemmes sont posés en piles : 4 de chaque couleur à 2 joueurs, 5 à 3 joueurs, 7 à 4 joueurs. Il y a toujours 5 jetons or.\n- Les cartes de développement sont en 3 niveaux, 4 cartes visibles par niveau. On révèle autant de nobles que de joueurs plus un.\n\n## Déroulement d'un tour\n- Une seule action par tour, au choix parmi les quatre suivantes.\n- Prendre 3 jetons de couleurs différentes.\n- Prendre 2 jetons de la même couleur, s'il en reste au moins 4 dans la pile.\n- Réserver une carte et prendre un jeton or. On peut réserver 3 cartes au maximum.\n- Acheter une carte, de la table ou réservée. Chaque carte possédée réduit le prix d'une gemme.\n- On a 10 jetons au maximum. À la fin de son tour, on reçoit la visite d'un noble si on a les bonnes cartes.\n\n## Fin de partie et décompte\n- Quand un joueur atteint 15 points, on finit le tour de table pour que chacun ait joué autant de fois.\n- Le plus de points gagne. En cas d'égalité, celui qui a acheté le moins de cartes l'emporte.\n\n## À retenir\n- Les jetons or sont des jokers.\n- Une carte achetée donne un bonus permanent d'une couleur.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 5 minutes\n- Joueurs conseillés : 2 à 4\n- Matériel à sortir : les jetons gemmes, les cartes de développement, les nobles\n\n## Expliquer en 5 minutes\n1. Le but : atteindre 15 points en achetant des cartes.\n2. Une seule action par tour : prendre des jetons, réserver ou acheter.\n3. Les cartes donnent un bonus qui réduit le prix des suivantes.\n4. Les nobles rendent visite à ceux qui ont les bons bonus.\n5. La limite de 10 jetons.\n\n## Aide-mémoire du tour\n- [ ] Prendre 3 jetons différents, ou 2 identiques\n- [ ] Ou réserver une carte\n- [ ] Ou acheter une carte\n- [ ] Vérifier la limite de 10 jetons\n\n## Erreurs classiques des nouveaux joueurs\n- Oublier la limite de 10 jetons.\n- Prendre 2 jetons identiques quand il en reste moins de 4.\n- Oublier le bonus des cartes dans le prix d'achat.\n\n## Partie d'essai conseillée\n- Jouer la première partie sans nobles.\n\n## Pour que ça se passe bien\n- Rappeler qu'un joueur qui achète beaucoup de cartes devient très fort.\n"
+  },
+  {
+   "name": "Takenoko",
+   "aliases": [
+    "Takenoko"
+   ],
+   "videos": [
+    {
+     "youtube_id": "iIct2o0xtp8",
+     "title": "LudoChrono - Takenoko",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nCultiver le jardin de l'empereur du Japon, nourrir son panda et accomplir le plus d'objectifs possible.\n\n## Mise en place\n- Placer la parcelle du lac au centre, le jardinier et le panda dessus.\n- Chaque joueur reçoit un jeu d'objectifs : jardin, jardinier et panda.\n\n## Déroulement d'un tour\n1. Lancer le dé météo, sauf au premier tour, et appliquer son effet.\n2. Faire 2 actions différentes parmi : poser une parcelle, prendre une irrigation, déplacer le jardinier, déplacer le panda, piocher un objectif.\n3. Le jardinier fait pousser du bambou sur une parcelle irriguée de sa couleur. Le panda en mange.\n\n## Fin de partie et décompte\n- Quand un joueur remplit assez d'objectifs, la dernière manche est lancée : 9 objectifs à 2 joueurs, 8 à 3, 7 à 4.\n- On ajoute les points de ses objectifs réussis. Le plus de points gagne.\n\n## À retenir\n- Le bambou ne pousse que sur les parcelles irriguées.\n- Les objectifs restent secrets jusqu'à ce qu'on les réalise.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 7 minutes\n- Joueurs conseillés : 2 à 4\n- Matériel à sortir : le plateau de parcelles, le panda, le jardinier, les cartes objectifs, le dé météo\n\n## Expliquer en 5 minutes\n1. Le but : réaliser des objectifs, avec le jardinier et le panda.\n2. Un tour : le dé météo, puis deux actions différentes.\n3. Poser une parcelle, irriguer, déplacer le jardinier ou le panda.\n4. Les trois sortes d'objectifs.\n5. La fin de partie et l'empereur.\n\n## Aide-mémoire du tour\n- [ ] Lancer le dé météo\n- [ ] Faire 2 actions différentes\n- [ ] Réaliser un objectif si possible\n\n## Erreurs classiques des nouveaux joueurs\n- Faire deux fois la même action.\n- Oublier que seules les parcelles irriguées font pousser du bambou.\n- Oublier l'effet du dé météo.\n\n## Partie d'essai conseillée\n- Jouer la première partie en montrant chaque objectif à découvert.\n\n## Pour que ça se passe bien\n- Rappeler que les objectifs sont secrets mais pas la parcelle.\n"
+  },
+  {
+   "name": "King of Tokyo",
+   "aliases": [
+    "King of Tokyo"
+   ],
+   "videos": [
+    {
+     "youtube_id": "oQvnDhVlU7E",
+     "title": "LudoChrono - King of Tokyo",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nIncarner un monstre géant qui se bat pour la conquête de Tokyo : atteindre 20 points de victoire ou rester le dernier en vie.\n\n## Mise en place\n- Chaque joueur prend un monstre, 10 points de vie et 0 point de victoire.\n- On pose le plateau de Tokyo, les cartes pouvoir et trois cartes visibles à la vente.\n\n## Déroulement d'un tour\n1. Lancer 6 dés, jusqu'à 3 fois, en mettant de côté ceux qu'on garde.\n2. Résoudre les dés : trois dés identiques rapportent des points de victoire, les cœurs soignent, les éclairs donnent de l'énergie, les pattes infligent des dégâts.\n3. Acheter, si on le souhaite, des cartes pouvoir avec son énergie.\n\n## Fin de partie et décompte\n- Victoire à 20 points de victoire, ou si on est le dernier monstre en vie.\n\n## À retenir\n- Entrer dans Tokyo rapporte 1 point, et 2 points au début de chaque tour qu'on y reste.\n- On ne se soigne pas avec les cœurs quand on est dans Tokyo.\n- Quand on est attaqué dans Tokyo, on peut choisir de céder sa place.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 5 minutes\n- Joueurs conseillés : 2 à 6\n- Matériel à sortir : les monstres, les dés, les cartes pouvoir, les jetons énergie\n\n## Expliquer en 5 minutes\n1. Le but : 20 points ou dernier monstre en vie.\n2. On lance les dés jusqu'à 3 fois et on garde ce qu'on veut.\n3. Les symboles des dés : chiffres, cœurs, éclairs, pattes.\n4. Tokyo : on y gagne des points mais on y reçoit tous les coups.\n5. Les cartes pouvoir s'achètent avec l'énergie.\n\n## Aide-mémoire du tour\n- [ ] Lancer jusqu'à 3 fois\n- [ ] Résoudre les dés\n- [ ] Acheter une carte pouvoir\n\n## Erreurs classiques des nouveaux joueurs\n- Se soigner dans Tokyo, ce qui est interdit.\n- Oublier de céder sa place quand on est attaqué.\n- Oublier les points gagnés en entrant dans Tokyo.\n\n## Partie d'essai conseillée\n- Jouer à 3 ou 4 joueurs pour une première partie.\n\n## Pour que ça se passe bien\n- Rappeler que céder sa place est un choix, pas une obligation.\n"
+  },
+  {
+   "name": "Love Letter",
+   "aliases": [
+    "Love Letter"
+   ],
+   "videos": [
+    {
+     "youtube_id": "c8tWq0y83oU",
+     "title": "Ludochrono - Love Letter",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nFaire parvenir sa lettre d'amour à la princesse : finir la manche avec la carte la plus forte ou être le dernier joueur en lice.\n\n## Mise en place\n- Mélanger les 16 cartes et en écarter une face cachée. À 2 joueurs, écarter aussi 3 cartes face visible.\n- Chaque joueur reçoit une carte.\n\n## Déroulement d'un tour\n1. Piocher une carte, ce qui donne 2 cartes en main.\n2. Jouer une de ses deux cartes et appliquer son effet.\n3. Le tour passe au joueur suivant.\n\n## Fin de partie et décompte\n- La manche se termine quand il ne reste qu'un joueur, ou quand la pioche est vide : la carte la plus forte l'emporte.\n- Le gagnant de la manche reçoit un jeton. Il en faut 7 à 2 joueurs, 5 à 3 joueurs, 4 à 4 joueurs.\n\n## À retenir\n- Garde : deviner la carte d'un adversaire pour l'éliminer. Prêtre : regarder sa main. Baron : comparer les cartes, la plus faible est éliminée.\n- Servante : protégée jusqu'à son prochain tour. Prince : un joueur défausse sa main et pioche. Roi : échanger sa main.\n- Comtesse : à défausser si on a aussi le Roi ou le Prince. Princesse : éliminé si on la défausse.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 3 minutes\n- Joueurs conseillés : 2 à 4\n- Matériel à sortir : les 16 cartes, les jetons d'amour, la carte récapitulative\n\n## Expliquer en 5 minutes\n1. Le but : finir la manche avec la meilleure carte.\n2. On a toujours 1 carte, on en pioche une, on en joue une.\n3. Chaque carte a un effet : montrer la carte récapitulative.\n4. Un joueur éliminé sort de la manche.\n5. Plusieurs manches : le premier à gagner assez de jetons gagne.\n\n## Aide-mémoire du tour\n- [ ] Piocher\n- [ ] Jouer une carte et appliquer son effet\n- [ ] Vérifier si la manche est finie\n\n## Erreurs classiques des nouveaux joueurs\n- Oublier que la Princesse ne se défausse jamais.\n- Oublier de défausser la Comtesse avec le Roi ou le Prince.\n- Annoncer un Garde pour un Garde.\n\n## Partie d'essai conseillée\n- Jouer quelques manches rapides en lisant chaque effet à voix haute.\n\n## Pour que ça se passe bien\n- Rappeler que la mémoire des cartes déjà jouées est un atout.\n"
+  },
+  {
+   "name": "Kingdomino",
+   "aliases": [
+    "Kingdomino"
+   ],
+   "videos": [
+    {
+     "youtube_id": "jnM9yf65rpo",
+     "title": "LudoChrono - Kingdomino",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nConstruire son royaume avec des dominos de terrain pour marquer le plus de points avec ses domaines et leurs couronnes.\n\n## Mise en place\n- Chaque joueur place son château au centre de sa zone de jeu et prend un roi de sa couleur (deux à 2 joueurs).\n- On retourne autant de dominos que de rois, classés par numéro croissant.\n\n## Déroulement d'un tour\n1. Au premier tour, les rois sont posés au hasard sur les dominos de la première rangée.\n2. Ensuite, le roi posé sur le plus petit numéro joue en premier. Son joueur ajoute ce domino à son royaume : il doit toucher le château ou un terrain de même type.\n3. Il pose alors son roi sur un domino de la nouvelle rangée. Puis le joueur suivant, dans l'ordre des numéros, fait de même.\n\n## Fin de partie et décompte\n- La partie s'arrête quand tous les dominos ont été joués.\n- Chaque domaine, c'est-à-dire un groupe de cases voisines de même terrain, rapporte son nombre de cases fois son nombre de couronnes.\n- Bonus : 10 points si le château est au centre, 5 points si le royaume est complet.\n\n## À retenir\n- Le royaume doit tenir dans un carré de 5 par 5 cases, de 7 par 7 à 2 joueurs.\n- Un domino ne peut pas être posé si aucune de ses cases ne touche un terrain compatible.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 3 minutes\n- Joueurs conseillés : 2 à 4\n- Matériel à sortir : les dominos, les châteaux, les rois\n\n## Expliquer en 5 minutes\n1. Le but : construire un royaume avec les meilleurs domaines.\n2. On choisit un domino pour le prochain tour.\n3. On pose le domino choisi au tour précédent.\n4. Les couronnes multiplient les points d'un domaine.\n5. Les bonus de fin.\n\n## Aide-mémoire du tour\n- [ ] Placer son domino\n- [ ] Choisir son prochain domino\n\n## Erreurs classiques des nouveaux joueurs\n- Oublier que le roi posé sur le plus petit numéro joue en premier au tour suivant.\n- Poser un domino qui ne touche aucun terrain compatible.\n- Sortir de la zone de 5 par 5 cases.\n\n## Partie d'essai conseillée\n- Jouer la première partie en comptant les points ensemble à la fin.\n\n## Pour que ça se passe bien\n- Rappeler que choisir un petit numéro permet de jouer plus tôt.\n"
+  },
+  {
+   "name": "Jaipur",
+   "aliases": [
+    "Jaipur"
+   ],
+   "videos": [
+    {
+     "youtube_id": "xdQymiuB5-c",
+     "title": "LudoChrono - Jaipur",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nÀ deux joueurs, devenir le marchand préféré du maharajah en gagnant 2 manches.\n\n## Mise en place\n- Trois chameaux sont posés face visible au marché, complétés par 2 cartes de la pioche.\n- Chaque joueur reçoit 5 cartes. Les chameaux vont dans son troupeau.\n- Les jetons marchandise sont posés en piles, les plus précieux au-dessus.\n\n## Déroulement d'un tour\n- Soit on prend des cartes : une carte marchandise, tous les chameaux du marché, ou on échange au moins 2 cartes avec le marché.\n- Soit on vend des cartes d'un seul type et on prend les jetons du dessus de la pile correspondante.\n\n## Fin de partie et décompte\n- La manche s'arrête quand 3 piles de jetons sont épuisées ou que le marché ne peut plus être complété.\n- Le plus de points gagne la manche. Le joueur au plus grand troupeau marque 5 points.\n- Le premier à gagner 2 manches remporte la partie.\n\n## À retenir\n- On a 7 cartes en main au maximum, les chameaux ne comptent pas.\n- On vend au moins 2 cartes pour les diamants, l'or et l'argent.\n- Vendre 3, 4 ou 5 cartes ou plus donne un jeton bonus.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 5 minutes\n- Joueurs conseillés : 2\n- Matériel à sortir : les cartes, les jetons marchandise, les jetons bonus, les chameaux\n\n## Expliquer en 5 minutes\n1. Le but : gagner 2 manches.\n2. Deux façons de jouer : prendre ou vendre.\n3. Le marché de 5 cartes et les chameaux.\n4. Les jetons marchandise et les bonus.\n5. La fin de manche.\n\n## Aide-mémoire du tour\n- [ ] Prendre des cartes\n- [ ] Ou vendre un type de marchandise\n- [ ] Vérifier la limite de 7 cartes\n\n## Erreurs classiques des nouveaux joueurs\n- Dépasser 7 cartes en main.\n- Vendre une seule carte de diamants, d'or ou d'argent.\n- Oublier que les chameaux sont gratuits pour la limite.\n\n## Partie d'essai conseillée\n- Jouer une manche pour comprendre avant de compter la partie.\n\n## Pour que ça se passe bien\n- Rappeler que garder des chameaux gêne l'adversaire au marché.\n"
+  },
+  {
+   "name": "6 qui prend !",
+   "aliases": [
+    "6 nimmt!",
+    "6 qui prend",
+    "Take 5",
+    "Take 6"
+   ],
+   "videos": [
+    {
+     "youtube_id": "kEvS1t9bpEk",
+     "title": "LudoChrono - 6 Qui prend",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nPoser ses cartes dans des rangées sans ramasser les têtes de bœuf : le joueur qui en a le moins gagne.\n\n## Mise en place\n- Chaque joueur reçoit 10 cartes. On pose 4 cartes face visible, qui forment 4 rangées.\n\n## Déroulement d'un tour\n1. Tous les joueurs choisissent une carte en secret et la révèlent en même temps.\n2. En commençant par la plus petite, chaque carte est placée à la fin de la rangée dont la dernière carte est la plus proche en dessous de la sienne.\n3. Si la carte est la sixième d'une rangée, le joueur ramasse les 5 cartes précédentes. Ce sont ses points de pénalité.\n4. Si la carte est plus petite que la dernière de chaque rangée, le joueur prend la rangée de son choix.\n\n## Fin de partie et décompte\n- Après dix tours, chacun compte les têtes de bœuf des cartes ramassées.\n- On rejoue des manches jusqu'à ce qu'un joueur arrive à 66 têtes de bœuf. Le moins de têtes gagne.\n\n## À retenir\n- Il y a 104 cartes numérotées de 1 à 104.\n- On ne choisit pas la rangée, sauf avec une carte trop faible.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 3 minutes\n- Joueurs conseillés : 3 à 8\n- Matériel à sortir : 104 cartes et un papier pour noter les scores\n\n## Expliquer en 5 minutes\n1. Le but : ramasser le moins de têtes de bœuf possible.\n2. Tout le monde joue en même temps.\n3. Les cartes montent dans les rangées par ordre croissant.\n4. La sixième carte d'une rangée fait ramasser les cinq précédentes.\n5. Les manches continuent jusqu'au seuil de 66.\n\n## Aide-mémoire du tour\n- [ ] Choisir une carte en secret\n- [ ] Tout révéler en même temps\n- [ ] Placer les cartes de la plus petite à la plus grande\n\n## Erreurs classiques des nouveaux joueurs\n- Placer la carte dans la mauvaise rangée.\n- Oublier qu'une carte trop faible oblige à ramasser une rangée.\n- Oublier de compter les têtes de bœuf et pas les cartes.\n\n## Partie d'essai conseillée\n- Jouer à 4 ou 5 joueurs pour une première partie.\n\n## Pour que ça se passe bien\n- Rappeler que la mémoire des cartes jouées aide beaucoup.\n"
+  },
+  {
+   "name": "Time's Up !",
+   "aliases": [
+    "Time's Up",
+    "Time's Up!",
+    "Time's Up Party",
+    "Time's Up! Party"
+   ],
+   "videos": [
+    {
+     "youtube_id": "Lpi7ngSC4fc",
+     "title": "LudoChrono - Time’s Up Party",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nFaire deviner le plus de personnages en 30 secondes à son équipe, en trois manches avec les mêmes cartes.\n\n## Mise en place\n- Former des équipes. On joue avec une pioche de cartes à faire deviner, dont le nombre exact est dans le livret.\n- Chaque manche, une équipe joue à la fois : un joueur fait deviner, les autres cherchent.\n\n## Déroulement d'un tour\n- Le joueur pioche une carte et fait deviner ce qui est écrit dessus à son équipe, sans le prononcer.\n- Il enchaîne autant de cartes que possible en 30 secondes.\n- Chaque carte devinée est gardée par l'équipe, les cartes passées sont remises sous le paquet.\n\n## Fin de partie et décompte\n- Manche 1 : on peut parler librement, sans dire le mot.\n- Manche 2 : un seul mot par carte.\n- Manche 3 : mime seulement.\n- L'équipe qui a deviné le plus de cartes sur les trois manches gagne.\n\n## À retenir\n- Les règles précises du nombre de cartes et des manches : À vérifier dans le livret.\n- Les cartes sont les mêmes pour les trois manches, on les mémorise.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 5 minutes\n- Joueurs conseillés : 4 à 12\n- Matériel à sortir : les cartes, le sablier, de quoi noter les scores\n\n## Expliquer en 5 minutes\n1. Deux équipes, et un sablier de 30 secondes.\n2. On fait deviner le contenu des cartes sans le prononcer.\n3. Trois manches avec les mêmes cartes, de plus en plus contraintes.\n4. On mime à la dernière manche.\n5. Le score cumule les trois manches.\n\n## Aide-mémoire du tour\n- [ ] Lancer le sablier\n- [ ] Faire deviner autant de cartes que possible\n- [ ] Compter les cartes devinées\n\n## Erreurs classiques des nouveaux joueurs\n- Prononcer le mot à deviner.\n- Oublier de remettre les cartes passées sous le paquet.\n- Oublier de changer de règle entre les manches.\n\n## Partie d'essai conseillée\n- Jouer une première manche d'essai sans compter les points.\n\n## Pour que ça se passe bien\n- Rappeler que les joueurs timides peuvent commencer à la manche des mots.\n"
+  },
+  {
+   "name": "Citadelles",
+   "aliases": [
+    "Citadels"
+   ],
+   "videos": [
+    {
+     "youtube_id": "sFx8O2uK3UY",
+     "title": "LudoChrono - Citadelles",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nBâtir la plus prestigieuse des cités en jouant des personnages aux pouvoirs secrets.\n\n## Mise en place\n- Chaque joueur reçoit 2 pièces d'or et 4 cartes quartier.\n- Le joueur qui a la couronne mène la phase de choix.\n\n## Déroulement d'un tour\n1. Phase de choix : chacun choisit un personnage en secret parmi ceux disponibles.\n2. On appelle les personnages dans l'ordre de leur numéro, de 1 à 8.\n3. Le joueur appelé joue son tour : il prend 2 pièces d'or ou pioche 2 cartes dont il garde 1.\n4. Il construit au plus un quartier en payant son coût, puis utilise le pouvoir de son personnage.\n\n## Fin de partie et décompte\n- La partie se termine à la fin du tour où un joueur a assez de quartiers dans sa cité (À vérifier dans le livret, cela dépend de l'édition).\n- On additionne la valeur des quartiers, 3 points si on a les cinq couleurs, 4 points pour le premier qui a terminé et 2 points pour les autres.\n\n## À retenir\n- Un joueur dont le personnage est assassiné passe son tour.\n- Un joueur ne peut pas construire deux quartiers identiques.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 10 minutes\n- Joueurs conseillés : 4 à 7\n- Matériel à sortir : les cartes personnage, les cartes quartier, les pièces, la couronne\n\n## Expliquer en 5 minutes\n1. Le but : bâtir la plus belle cité.\n2. On choisit un personnage en secret.\n3. On joue dans l'ordre des numéros.\n4. Un tour : gagner de l'argent ou piocher, construire, utiliser son pouvoir.\n5. Les pouvoirs des personnages.\n\n## Aide-mémoire du tour\n- [ ] Prendre 2 pièces ou piocher 2 cartes\n- [ ] Construire un quartier\n- [ ] Utiliser le pouvoir de son personnage\n\n## Erreurs classiques des nouveaux joueurs\n- Oublier de dire son personnage quand il est appelé.\n- Construire deux quartiers dans le même tour.\n- Oublier de piocher ou de prendre de l'argent.\n\n## Partie d'essai conseillée\n- Jouer à 4 joueurs et lire chaque pouvoir à voix haute.\n\n## Pour que ça se passe bien\n- Rappeler que deviner les personnages des autres est le cœur du jeu.\n"
+  },
+  {
+   "name": "Small World",
+   "aliases": [
+    "Smallworld",
+    "SmallWorld",
+    "Small World (2e édition)"
+   ],
+   "videos": [
+    {
+     "youtube_id": "ZmNxON3HK4Y",
+     "title": "LudoChrono - SmallWorld",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nConquérir des régions avec un peuple et un pouvoir, puis le laisser en déclin pour en prendre un nouveau, afin de marquer le plus de pièces de victoire.\n\n## Mise en place\n- Choisir la carte du plateau selon le nombre de joueurs.\n- On forme des combinaisons de peuple et de pouvoir. On choisit celle de son choix, la première est gratuite, les suivantes coûtent des pièces.\n\n## Déroulement d'un tour\n- Conquérir : poser ses pions de peuple sur des régions voisines, en commençant par les bords. Chaque région coûte 2 pions, plus 1 par pion adverse ou obstacle.\n- Redéployer ses pions comme on le souhaite.\n- Marquer 1 pièce de victoire par région occupée, plus les bonus.\n\n## Fin de partie et décompte\n- La partie dure un nombre fixe de tours qui dépend du nombre de joueurs (À vérifier dans le livret).\n- Le joueur qui a le plus de pièces de victoire gagne.\n\n## À retenir\n- Le déclin : on retourne ses pions de peuple et on garde ses régions, mais on ne conquiert plus avec.\n- On ne peut avoir qu'un peuple actif et un peuple en déclin.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 10 minutes\n- Joueurs conseillés : 3 à 5\n- Matériel à sortir : le plateau, les pions de peuple, les pièces de victoire, les cartes de peuples et de pouvoirs\n\n## Expliquer en 5 minutes\n1. Le but : avoir le plus de pièces de victoire.\n2. On choisit un peuple et un pouvoir.\n3. On conquiert des régions voisines.\n4. On marque en fin de tour.\n5. Le déclin : prendre un nouveau peuple.\n\n## Aide-mémoire du tour\n- [ ] Conquérir des régions\n- [ ] Redéployer ses pions\n- [ ] Compter ses pièces de victoire\n\n## Erreurs classiques des nouveaux joueurs\n- Oublier le coût de conquête des régions défendues.\n- Passer en déclin trop tôt ou trop tard.\n- Oublier qu'on ne conquiert pas avec un peuple en déclin.\n\n## Partie d'essai conseillée\n- Jouer une partie à 3 joueurs en lisant chaque pouvoir au moment du choix.\n\n## Pour que ça se passe bien\n- Rappeler que le passage en déclin est un choix important.\n"
+  },
+  {
+   "name": "Wingspan",
+   "aliases": [
+    "Envergure"
+   ],
+   "videos": [
+    {
+     "youtube_id": "aAjFAySW_oY",
+     "title": "Ludochrono - Wingspan",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nAttirer des oiseaux dans ses trois habitats pour marquer le plus de points en quatre manches.\n\n## Mise en place\n- Chaque joueur reçoit un plateau personnel, 5 cartes oiseau et 5 jetons nourriture. Pour chaque carte oiseau gardée, on défausse un jeton nourriture.\n- On choisit aussi une carte bonus sur deux.\n- On pose les objectifs de manche.\n\n## Déroulement d'un tour\n- Une action par tour : jouer un oiseau, prendre de la nourriture, pondre des œufs, ou piocher des cartes.\n- Jouer un oiseau : on paie sa nourriture et un œuf selon la colonne de l'habitat.\n- Les autres actions : la forêt donne de la nourriture, la prairie des œufs, la zone humide des cartes. Les pouvoirs des oiseaux de l'habitat s'activent.\n\n## Fin de partie et décompte\n- La partie dure 4 manches, avec 8, 7, 6 puis 5 actions par joueur.\n- On compte les points des oiseaux, des cartes bonus, des objectifs de manche, des œufs, de la nourriture mise en réserve et des cartes glissées sous les oiseaux.\n\n## À retenir\n- Les pouvoirs bruns s'activent quand on utilise l'habitat, de droite à gauche.\n- Les pouvoirs roses se déclenchent entre les tours des autres joueurs.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 10 minutes\n- Joueurs conseillés : 2 à 4\n- Matériel à sortir : les plateaux, les cartes oiseau et bonus, les œufs, les jetons de nourriture, la mangeoire à dés\n\n## Expliquer en 5 minutes\n1. Le but : faire un maximum de points avec ses oiseaux.\n2. Les trois habitats donnent chacun une action.\n3. Jouer un oiseau coûte de la nourriture et des œufs.\n4. Les pouvoirs des oiseaux s'activent en cascade.\n5. Quatre manches, avec des objectifs à chaque manche.\n\n## Aide-mémoire du tour\n- [ ] Choisir une action\n- [ ] Appliquer les pouvoirs de l'habitat\n- [ ] Jouer un oiseau si on peut\n\n## Erreurs classiques des nouveaux joueurs\n- Oublier d'activer les pouvoirs de l'habitat.\n- Oublier le coût en œufs d'un oiseau.\n- Oublier les objectifs de manche.\n\n## Partie d'essai conseillée\n- Jouer sans les cartes bonus la première partie.\n\n## Pour que ça se passe bien\n- Rappeler que l'on peut planifier ses oiseaux dès le début.\n"
+  },
+  {
+   "name": "Cascadia",
+   "aliases": [
+    "Cascadia"
+   ],
+   "videos": [
+    {
+     "youtube_id": "CP1HFNNWpUk",
+     "title": "Ludochrono - Cascadia",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nComposer un paysage de la nature sauvage du nord-ouest du Pacifique en plaçant des tuiles et des animaux pour marquer le plus de points.\n\n## Mise en place\n- Chaque joueur reçoit une tuile de départ composée de trois tuiles.\n- On place 4 tuiles et 4 jetons animaux au centre, formés en paires.\n\n## Déroulement d'un tour\n- Choisir une tuile et un jeton animal dans le même ensemble, ou séparément en dépensant un jeton nature.\n- Placer la tuile à côté de son paysage.\n- Placer le jeton animal sur une tuile qui accepte cet animal, si possible.\n\n## Fin de partie et décompte\n- La partie s'arrête quand la pioche est épuisée.\n- On compte les points : les cartes animaux, le plus grand corridor de chaque type d'habitat et les jetons nature.\n\n## À retenir\n- Placer un animal sur une tuile à clé rapporte un jeton nature.\n- Chaque animal a sa propre carte de score, qui change à chaque partie.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 5 minutes\n- Joueurs conseillés : 2 à 4\n- Matériel à sortir : les tuiles, les jetons animaux, les cartes de score, les jetons nature\n\n## Expliquer en 5 minutes\n1. Le but : un beau paysage et des animaux bien placés.\n2. Choisir une tuile et un animal.\n3. Placer ses tuiles et ses animaux.\n4. Les cartes de score d'animaux.\n5. Les habitats et leurs corridors.\n\n## Aide-mémoire du tour\n- [ ] Choisir une tuile et un animal\n- [ ] Placer la tuile\n- [ ] Placer l'animal\n\n## Erreurs classiques des nouveaux joueurs\n- Placer un animal sur une tuile qui ne l'accepte pas.\n- Oublier le jeton nature.\n- Oublier les points des corridors.\n\n## Partie d'essai conseillée\n- Jouer la première partie avec les cartes de score de la variante A.\n\n## Pour que ça se passe bien\n- Rappeler que les cartes de score sont à lire avant de commencer.\n"
+  },
+  {
+   "name": "Just One",
+   "aliases": [
+    "Just One"
+   ],
+   "videos": [
+    {
+     "youtube_id": "FNddIoRoyZ8",
+     "title": "LudoChrono - Just One",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nFaire deviner des mots mystères à un joueur avec des indices d'un seul mot, tous ensemble.\n\n## Mise en place\n- Chaque joueur prend un chevalet et un feutre. Les cartes mot sont mélangées.\n\n## Déroulement d'un tour\n- Le joueur actif choisit un numéro, sans regarder la carte. Les autres lisent le mot.\n- Chacun écrit en secret un indice d'un seul mot sur son chevalet.\n- Les indices identiques ou de la même famille sont masqués.\n- Le joueur actif propose un mot, ou passe.\n\n## Fin de partie et décompte\n- Une partie utilise 13 cartes.\n- Chaque mot trouvé donne un point. Un mot faux fait défausser en plus une carte.\n\n## À retenir\n- Les indices masqués ne sont pas montrés au joueur qui devine.\n- Le jeu est coopératif : on gagne ensemble.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 3 minutes\n- Joueurs conseillés : 4 à 7\n- Matériel à sortir : les chevalets, les feutres, les cartes mot\n\n## Expliquer en 5 minutes\n1. Le but : faire deviner un maximum de mots.\n2. Chacun donne un indice d'un seul mot.\n3. Les indices identiques sont masqués.\n4. Le joueur qui devine propose un mot.\n5. Le score de la partie.\n\n## Aide-mémoire du tour\n- [ ] Écrire son indice en secret\n- [ ] Masquer les indices identiques\n- [ ] Proposer un mot\n\n## Erreurs classiques des nouveaux joueurs\n- Écrire un indice de plusieurs mots.\n- Ne pas masquer les indices de la même famille.\n- Montrer un indice masqué.\n\n## Partie d'essai conseillée\n- Jouer une première manche avec des mots faciles.\n\n## Pour que ça se passe bien\n- Rappeler qu'il faut chercher un indice original, pas évident.\n"
+  },
+  {
+   "name": "The Mind",
+   "aliases": [
+    "The Mind"
+   ],
+   "videos": [
+    {
+     "youtube_id": "QvEfUdi3vo4",
+     "title": "LudoChrono - The Mind",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nPoser des cartes dans l'ordre croissant sans se parler, en se synchronisant tous ensemble.\n\n## Mise en place\n- Les cartes sont numérotées de 1 à 100. Au niveau 1, chacun reçoit 1 carte, au niveau 2 deux cartes, et ainsi de suite.\n- On commence avec des vies et un shuriken, selon le nombre de joueurs.\n\n## Déroulement d'un tour\n- Sans parler ni faire de signe, les joueurs posent leurs cartes au centre dans l'ordre croissant.\n- Si un joueur pose une carte alors qu'un autre en a une plus petite, l'équipe perd une vie.\n- Si tout le monde est d'accord, un shuriken permet à chacun de défausser sa plus petite carte.\n\n## Fin de partie et décompte\n- On gagne en réussissant tous les niveaux : 12 à 2 joueurs, 10 à 3 joueurs, 8 à 4 joueurs.\n- On perd quand il n'y a plus de vie.\n\n## À retenir\n- Aucune communication n'est permise, même par les regards.\n- Certains niveaux rapportent une vie ou un shuriken.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 2 minutes\n- Joueurs conseillés : 2 à 4\n- Matériel à sortir : les cartes, les vies, le shuriken\n\n## Expliquer en 5 minutes\n1. Le but : poser toutes les cartes dans l'ordre sans se parler.\n2. À chaque niveau, une carte de plus par joueur.\n3. Si on se trompe, on perd une vie.\n4. Le shuriken défausse la plus petite carte.\n5. La victoire : passer tous les niveaux.\n\n## Aide-mémoire du tour\n- [ ] Se concentrer en silence\n- [ ] Poser sa carte au bon moment\n- [ ] Vérifier si une erreur a été commise\n\n## Erreurs classiques des nouveaux joueurs\n- Se parler ou se faire des signes.\n- Oublier de défausser les cartes plus petites après une erreur.\n- Oublier de gagner la récompense du niveau.\n\n## Partie d'essai conseillée\n- Jouer le niveau 1 ensemble avant de continuer.\n\n## Pour que ça se passe bien\n- Rappeler que se tromper est normal : le jeu est fait pour cela.\n"
+  },
+  {
+   "name": "Patchwork",
+   "aliases": [
+    "Patchwork"
+   ],
+   "videos": [
+    {
+     "youtube_id": "MtGR-9ITlNM",
+     "title": "LudoChrono - Patchwork",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nÀ deux joueurs, coudre le plus beau patchwork en finissant avec le plus de boutons.\n\n## Mise en place\n- Chaque joueur reçoit un plateau de 9 par 9 cases et 5 boutons.\n- Les pièces de tissu sont posées en cercle autour du pion neutre. Chaque joueur place son pion au début de la piste de temps.\n\n## Déroulement d'un tour\n- C'est le joueur dont le pion est derrière sur la piste de temps qui joue.\n- Soit il avance son pion sur la case devant le pion adverse et gagne 1 bouton par case.\n- Soit il achète l'une des 3 pièces suivant le pion neutre, la place sur son plateau et avance son pion du temps indiqué.\n\n## Fin de partie et décompte\n- La partie s'arrête quand les deux pions ont atteint la fin de la piste.\n- Chaque bouton vaut 1 point, chaque case vide du plateau fait perdre 2 points.\n- Le premier à compléter un carré de 7 par 7 gagne un bonus de 7 points.\n\n## À retenir\n- Quand un pion passe un bouton de la piste, le joueur reçoit autant de boutons que son plateau en a.\n- Les petites pièces en cuir se placent gratuitement quand un pion les atteint.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 5 minutes\n- Joueurs conseillés : 2\n- Matériel à sortir : les plateaux, les pièces de tissu, les boutons, la piste de temps\n\n## Expliquer en 5 minutes\n1. Le but : plus de boutons, moins de cases vides.\n2. On joue quand son pion est derrière.\n3. Avancer et gagner des boutons, ou acheter une pièce.\n4. Les revenus de boutons sur la piste.\n5. La fin de partie et les points.\n\n## Aide-mémoire du tour\n- [ ] Avancer sur le pion adverse\n- [ ] Ou acheter une pièce de tissu\n- [ ] Gérer les revenus\n\n## Erreurs classiques des nouveaux joueurs\n- Oublier que le joueur derrière joue en premier.\n- Acheter une pièce trop chère.\n- Oublier le bonus des cuirs.\n\n## Partie d'essai conseillée\n- Jouer à découvert avec les coûts bien visibles.\n\n## Pour que ça se passe bien\n- Rappeler que les cases vides coûtent 2 points.\n"
+  },
+  {
+   "name": "Dominion",
+   "aliases": [
+    "Dominion"
+   ],
+   "videos": [
+    {
+     "youtube_id": "dVgqOujGpc8",
+     "title": "Ludochrono - Dominion",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nConstruire son deck pour acquérir le plus de points de victoire dans un royaume.\n\n## Mise en place\n- Chaque joueur commence avec 7 Cuivres et 3 Domaines, mélangés, et pioche 5 cartes.\n- On choisit 10 cartes Royaume, mises en piles au centre, avec les cartes Trésor et Victoire.\n\n## Déroulement d'un tour\n1. Phase Action : jouer une carte Action, si on en a une.\n2. Phase Achat : jouer ses Trésors et acheter une carte, de coût inférieur ou égal.\n3. Phase Nettoyage : défausser tout et piocher 5 nouvelles cartes.\n\n## Fin de partie et décompte\n- La partie s'arrête quand la pile des Provinces est vide, ou quand trois piles sont vides.\n- On additionne ses points : Domaine 1, Duché 3, Province 6, Malédiction moins 1, et les cartes Royaume qui comptent.\n\n## À retenir\n- Quand la pioche est vide, on mélange la défausse pour en refaire une.\n- Chaque carte achetée va dans la défausse.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 10 minutes\n- Joueurs conseillés : 2 à 4\n- Matériel à sortir : les cartes Royaume, Trésor et Victoire, les piles\n\n## Expliquer en 5 minutes\n1. Le but : avoir le plus de points de victoire.\n2. Chacun a un petit deck au départ.\n3. Un tour : Action, Achat, Nettoyage.\n4. Les cartes achetées améliorent le deck.\n5. La fin de partie.\n\n## Aide-mémoire du tour\n- [ ] Jouer une carte Action\n- [ ] Acheter une carte\n- [ ] Défausser et piocher 5 cartes\n\n## Erreurs classiques des nouveaux joueurs\n- Acheter trop de cartes Victoire trop tôt.\n- Oublier de défausser sa main.\n- Oublier de mélanger la défausse.\n\n## Partie d'essai conseillée\n- Jouer la première partie avec un jeu de 10 cartes recommandées pour débuter.\n\n## Pour que ça se passe bien\n- Rappeler que chaque achat change le deck pour la suite.\n"
+  },
+  {
+   "name": "Les Loups-Garous de Thiercelieux",
+   "aliases": [
+    "Loups-Garous de Thiercelieux",
+    "Loup-Garou",
+    "Werewolves of Miller's Hollow",
+    "The Werewolves of Miller's Hollow"
+   ],
+   "videos": [
+    {
+     "youtube_id": "26SQIHSvnMk",
+     "title": "LudoChrono - Les loups garous de Thiercelieux",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nUn village cherche à démasquer les loups-garous cachés parmi lui, qui eux tentent de dévorer tous les villageois.\n\n## Mise en place\n- Un joueur est narrateur. Chaque autre joueur reçoit une carte rôle en secret.\n- La répartition des rôles dépend du nombre de joueurs : À vérifier dans le livret.\n\n## Déroulement d'un tour\n- La nuit : tout le monde ferme les yeux. Le narrateur réveille les rôles à tour de rôle, comme les loups-garous qui choisissent une victime.\n- Le jour : le village se réveille, on annonce la victime de la nuit, qui est éliminée.\n- Les survivants discutent et votent pour éliminer un suspect.\n\n## Fin de partie et décompte\n- Les villageois gagnent s'ils éliminent tous les loups-garous.\n- Les loups-garous gagnent s'ils ont éliminé tous les villageois.\n\n## À retenir\n- Le narrateur ne donne aucune information en dehors de ses annonces.\n- Les joueurs éliminés ne parlent plus et ne révèlent rien.\n- Rôles courants : la Voyante regarde le rôle d'un joueur chaque nuit, la Sorcière a une potion de vie et une de mort, le Chasseur élimine un joueur en mourant, Cupidon lie deux amoureux.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 5 minutes\n- Joueurs conseillés : 8 à 18\n- Matériel à sortir : les cartes rôle, éventuellement une application pour le narrateur\n\n## Expliquer en 5 minutes\n1. Un narrateur guide la partie, les autres ont un rôle secret.\n2. La nuit, les loups-garous choisissent une victime.\n3. Le jour, le village vote pour éliminer un suspect.\n4. Chaque rôle a un pouvoir, expliqué au moment où il est appelé.\n5. Les conditions de victoire.\n\n## Aide-mémoire du tour\n- [ ] Nuit : le narrateur appelle les rôles\n- [ ] Jour : annoncer les victimes\n- [ ] Discuter et voter\n\n## Erreurs classiques des nouveaux joueurs\n- Révéler son rôle en mourant quand ce n'est pas prévu.\n- Ouvrir les yeux la nuit.\n- Oublier d'appeler un rôle.\n\n## Partie d'essai conseillée\n- Jouer une première partie avec peu de rôles spéciaux.\n\n## Pour que ça se passe bien\n- Rappeler que mentir est permis, mais pas de tricher.\n- Choisir un narrateur expérimenté.\n"
+  },
+  {
+   "name": "Colt Express",
+   "aliases": [
+    "Colt Express"
+   ],
+   "videos": [
+    {
+     "youtube_id": "HvlT8JU5Y_o",
+     "title": "LudoChrono - Colt Express",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nDévaliser un train en 2D et finir la partie avec le plus de dollars.\n\n## Mise en place\n- Assembler le train : une locomotive et autant de wagons que de joueurs. Chaque joueur prend un bandit, ses cartes d'action et une bourse de départ.\n- On pose les cartes de tour de la manche.\n\n## Déroulement d'un tour\n1. Planification : les joueurs jouent des cartes action face cachée dans une pile commune, selon le type de tour.\n2. Action : on résout la pile dans l'ordre, une carte à la fois. Se déplacer, changer d'étage, tirer, braquer, déplacer le marshal.\n\n## Fin de partie et décompte\n- La partie dure plusieurs manches, selon les cartes de manche (À vérifier dans le livret).\n- Le plus riche gagne. Le meilleur tireur gagne un bonus de 1 000 $.\n\n## À retenir\n- Une carte jouée trop tôt se retrouve résolue plus tard : on planifie à l'aveugle.\n- Les bourses valent de 250 à 500 $, les bijoux 500 $ et la mallette 1 000 $.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 7 minutes\n- Joueurs conseillés : 3 à 6\n- Matériel à sortir : le train, les bandits, les cartes action, le butin\n\n## Expliquer en 5 minutes\n1. Le but : finir avec le plus d'argent.\n2. On joue ses cartes à tour de rôle, face cachée.\n3. Puis on les révèle et on les résout dans l'ordre.\n4. Les actions : se déplacer, monter, tirer, braquer.\n5. Le marshal et les balles.\n\n## Aide-mémoire du tour\n- [ ] Planifier en jouant des cartes\n- [ ] Résoudre les actions dans l'ordre\n\n## Erreurs classiques des nouveaux joueurs\n- Oublier que l'ordre est celui des cartes posées.\n- Oublier le marshal.\n- Oublier le bonus du meilleur tireur.\n\n## Partie d'essai conseillée\n- Jouer à découvert la première manche.\n\n## Pour que ça se passe bien\n- Rappeler que les surprises sont une partie du plaisir.\n"
+  },
+  {
+   "name": "Skyjo",
+   "aliases": [
+    "Skyjo"
+   ],
+   "videos": [
+    {
+     "youtube_id": "4BJv_vDqou8",
+     "title": "Ludochrono - Skyjo",
+     "channel": "Ludovox"
+    }
+   ],
+   "summary": "## But du jeu\nFinir avec le moins de points possible en échangeant ses cartes, jusqu'à ce qu'un joueur atteigne 100 points.\n\n## Mise en place\n- Chaque joueur reçoit 12 cartes face cachée, en 3 lignes de 4. Il en retourne 2.\n- Une carte est posée face visible pour lancer la défausse.\n\n## Déroulement d'un tour\n- Piocher la première carte de la pioche ou prendre celle de la défausse.\n- La garder pour remplacer une de ses cartes, visible ou cachée, et défausser l'ancienne.\n- Ou, si on a pioché, la défausser et retourner l'une de ses cartes cachées.\n- Si une colonne de trois cartes visibles est identique, on la retire.\n\n## Fin de partie et décompte\n- La manche se termine quand un joueur a toutes ses cartes visibles : les autres jouent un dernier tour.\n- Si ce joueur n'a pas le plus petit score, ses points sont doublés.\n- La partie s'arrête quand un joueur dépasse 100 points. Le moins de points gagne.\n\n## À retenir\n- Les cartes vont de moins 2 à 12.\n- On ne prend pas la défausse pour la rejeter aussitôt.\n",
+   "beginner_guide": "## Avant de commencer\n- Durée d'explication : 3 minutes\n- Joueurs conseillés : 2 à 8\n- Matériel à sortir : les cartes, de quoi noter les scores\n\n## Expliquer en 5 minutes\n1. Le but : avoir le moins de points possible.\n2. Chaque joueur a 12 cartes en grille, deux sont visibles.\n3. On pioche et on remplace une carte.\n4. Trois cartes identiques en colonne se défaussent.\n5. La manche se termine quand tout est visible.\n\n## Aide-mémoire du tour\n- [ ] Piocher ou prendre la défausse\n- [ ] Remplacer ou retourner une carte\n- [ ] Retirer une colonne identique\n\n## Erreurs classiques des nouveaux joueurs\n- Oublier de retirer une colonne de trois cartes identiques.\n- Oublier de doubler les points du joueur qui termine.\n- Oublier de jouer le dernier tour.\n\n## Partie d'essai conseillée\n- Jouer une manche courte pour apprendre.\n\n## Pour que ça se passe bien\n- Rappeler que les cartes basses sont les bonnes.\n"
+  }
+ ]
+}

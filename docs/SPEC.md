@@ -44,7 +44,7 @@ Usage principal sur téléphone, accès sur le réseau local.
   - partie d'essai ou tour à découvert conseillé,
   - durée d'explication estimée.
 - Version imprimable (CSS print).
-- Rédaction manuelle dans un éditeur Markdown, ou brouillon généré via l'API Claude si une clé est fournie, à relire avant publication.
+- Rédaction manuelle dans un éditeur Markdown. Un paquet de fiches et de vidéos prêtes à l'emploi, livré avec l'appli, complète en un clic les jeux courants déjà présents. Un brouillon généré via l'API Claude reste possible si une clé est fournie. Tout brouillon est à relire avant publication.
 - Interdiction de recopier le livret officiel.
 
 ## 6. Prix du marché

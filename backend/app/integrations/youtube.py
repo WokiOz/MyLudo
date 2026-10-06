@@ -102,7 +102,7 @@ class OEmbedClient:
             )
         except httpx.HTTPError:
             return None
-        if response.status_code == 404:
+        if response.status_code in (400, 404):  # 400 : identifiant qui n'existe pas
             raise VideoNotFoundError("Cette vidéo est introuvable ou privée.")
         if response.status_code != 200:
             return None

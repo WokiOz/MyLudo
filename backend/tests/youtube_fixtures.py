@@ -2,13 +2,13 @@
 
 import httpx
 
-LUDO = "AAAAAAAAAAA"  # Ludochrono
+LUDO = "AAAAAAAAAAA"  # Ludovox (publie les LudoChrono)
 OTHER = "BBBBBBBBBBB"  # autre chaîne française
 ENGLISH = "CCCCCCCCCCC"  # vidéo en anglais
 OFFTOPIC = "DDDDDDDDDDD"  # sans rapport avec le jeu
 
 VIDEOS = {
-    LUDO: ("Catan - Règles du jeu", "Ludochrono", "fr", "PT12M30S"),
+    LUDO: ("Catan - Règles du jeu", "Ludovox", "fr", "PT12M30S"),
     OTHER: ("Les Colons de Catan : comment jouer", "Une autre chaîne", None, "PT1H2M"),
     ENGLISH: ("Catan how to play", "Board Game Channel", "en", "PT9M"),
     OFFTOPIC: ("Recette de crêpes", "Cuisine", "fr", "PT5M"),
@@ -30,11 +30,11 @@ def youtube_transport(error_reason: str | None = None, status: int = 200) -> htt
                     "items": [
                         {
                             "id": {"channelId": "UC-autre"},
-                            "snippet": {"channelTitle": "Ludochrono Fan Club"},
+                            "snippet": {"channelTitle": "Ludovox Fan Club"},
                         },
                         {
                             "id": {"channelId": "UC-ludo"},
-                            "snippet": {"channelTitle": "Ludochrono"},
+                            "snippet": {"channelTitle": "Ludovox"},
                         },
                     ]
                 },
@@ -64,6 +64,7 @@ def youtube_transport(error_reason: str | None = None, status: int = 200) -> htt
 
 
 PRIVATE = "PPPPPPPPPPP"  # vidéo privée ou supprimée
+UNKNOWN = "UUUUUUUUUUU"  # identifiant inexistant
 DOWN = OTHER  # YouTube répond une erreur pour celle-ci
 
 
@@ -75,10 +76,12 @@ def oembed_transport() -> httpx.MockTransport:
         video_id = request.url.params["url"].rsplit("=", 1)[-1]
         if video_id == PRIVATE:
             return httpx.Response(404)
+        if video_id == UNKNOWN:
+            return httpx.Response(400)  # identifiant qui n'existe pas
         if video_id == DOWN:
             return httpx.Response(500)
         return httpx.Response(
-            200, json={"title": "Catan - Règles du jeu", "author_name": "Ludochrono"}
+            200, json={"title": "Catan - Règles du jeu", "author_name": "Ludovox"}
         )
 
     return httpx.MockTransport(handler)

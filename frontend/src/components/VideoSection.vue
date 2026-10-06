@@ -14,13 +14,11 @@ const busy = ref(false)
 const searching = ref(false)
 const error = ref('')
 const apiSearch = ref(false)
-const channels = ref<string[]>([])
 
 onMounted(async () => {
   try {
     const status = await api.status()
     apiSearch.value = status.integrations.youtube
-    channels.value = status.integrations.youtube_channels
   } catch {
     /* sans le statut, seuls les liens de recherche YouTube sont proposés */
   }
@@ -28,12 +26,7 @@ onMounted(async () => {
 
 const youtubeSearch = (query: string) =>
   `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`
-const channelLinks = computed(() =>
-  (channels.value.length ? channels.value : ['Ludochrono']).map((name) => ({
-    name,
-    url: youtubeSearch(`${name} ${props.gameName}`),
-  })),
-)
+const ludochronoLink = computed(() => youtubeSearch(`LudoChrono ${props.gameName}`))
 const frenchLink = computed(() => youtubeSearch(`${props.gameName} règles du jeu`))
 
 async function guard(action: () => Promise<void>) {
@@ -108,15 +101,8 @@ const notFrench = (language: string | null) => !!language && !language.toLowerCa
     <p v-if="error" class="error" role="alert">{{ error }}</p>
 
     <div class="row">
-      <a
-        v-for="link in channelLinks"
-        :key="link.name"
-        class="button"
-        :href="link.url"
-        target="_blank"
-        rel="noopener"
-      >
-        {{ link.name }} sur YouTube ↗
+      <a class="button" :href="ludochronoLink" target="_blank" rel="noopener">
+        LudoChrono sur YouTube ↗
       </a>
       <a class="button" :href="frenchLink" target="_blank" rel="noopener">
         Autres règles en français ↗

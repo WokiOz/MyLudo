@@ -138,6 +138,27 @@ export interface Status {
   }
 }
 
+export interface PackEntry {
+  name: string
+  game_id: number | null
+  game_name: string | null
+  new_videos: number
+  new_sheets: number
+}
+
+export interface PackPreview {
+  total: number
+  in_collection: number
+  to_add: number
+  games: PackEntry[]
+}
+
+export interface PackResult {
+  games: number
+  videos_added: number
+  sheets_added: number
+}
+
 export interface AuthStatus {
   auth_required: boolean
   authenticated: boolean
@@ -252,6 +273,9 @@ export const api = {
   ) => request<void>('PUT', `/games/${id}/rules/${kind}`, { content_md, origin, reviewed }),
   draftRule: (id: number, kind: RuleKind) =>
     request<{ content_md: string }>('POST', `/games/${id}/rules/${kind}/draft`),
+
+  pack: () => request<PackPreview>('GET', '/pack'),
+  applyPack: () => request<PackResult>('POST', '/pack/apply'),
 
   importCsv: (text: string) => request<ImportResult>('POST', '/import/csv', text, true),
   importJson: (text: string) => request<ImportResult>('POST', '/import/json', text, true),

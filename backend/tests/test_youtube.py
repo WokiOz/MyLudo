@@ -15,6 +15,7 @@ from tests.youtube_fixtures import (
     OFFTOPIC,
     OTHER,
     PRIVATE,
+    UNKNOWN,
     oembed_transport,
     youtube_transport,
 )
@@ -71,18 +72,18 @@ def _clear_channel_cache():
 
 def test_suggest_puts_priority_channel_first_and_filters():
     client = YouTubeClient("cle-secrete", transport=youtube_transport())
-    videos = client.suggest("Catan", ["Ludochrono"])
+    videos = client.suggest("Catan", ["Ludovox"])
     ids = [v.youtube_id for v in videos]
     assert ids == [LUDO, OTHER]  # ni l'anglais ni le hors-sujet
     assert videos[0].priority and not videos[1].priority
-    assert videos[0].channel == "Ludochrono" and videos[0].duration_seconds == 750
+    assert videos[0].channel == "Ludovox" and videos[0].duration_seconds == 750
     assert ENGLISH not in ids and OFFTOPIC not in ids
 
 
 def test_channel_is_resolved_once_and_exactly():
     client = YouTubeClient("cle-secrete", transport=youtube_transport())
-    assert client.find_channel("Ludochrono") == "UC-ludo"  # et non le « fan club »
-    assert youtube._channel_ids == {"ludochrono": "UC-ludo"}
+    assert client.find_channel("Ludovox") == "UC-ludo"  # et non le « fan club »
+    assert youtube._channel_ids == {"ludovox": "UC-ludo"}
 
 
 def test_unknown_channel_is_skipped():
@@ -120,13 +121,15 @@ def test_network_failure_hides_the_key():
 
 def test_oembed_needs_no_key():
     info = OEmbedClient(transport=oembed_transport()).info(LUDO)
-    assert (info.title, info.channel) == ("Catan - Règles du jeu", "Ludochrono")
+    assert (info.title, info.channel) == ("Catan - Règles du jeu", "Ludovox")
 
 
 def test_oembed_private_video_and_outage():
     client = OEmbedClient(transport=oembed_transport())
     with pytest.raises(VideoNotFoundError):
         client.info(PRIVATE)
+    with pytest.raises(VideoNotFoundError):
+        client.info(UNKNOWN)
     assert client.info(OTHER) is None  # erreur 500 : on garde le lien sans détails
 
 

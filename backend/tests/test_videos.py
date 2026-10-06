@@ -35,7 +35,7 @@ def test_pick_suggestion_then_flagged_as_added(client):
     pick = {
         "youtube_id": LUDO,
         "title": "Catan - Règles du jeu",
-        "channel": "Ludochrono",
+        "channel": "Ludovox",
         "language": "fr",
     }
     response = client.post(f"/api/games/{game['id']}/videos/pick", json=pick)
@@ -58,7 +58,7 @@ def test_add_link_fills_title_from_youtube(client):
     assert response.status_code == 201
     assert (video["title"], video["channel"], video["language"]) == (
         "Catan - Règles du jeu",
-        "Ludochrono",
+        "Ludovox",
         "fr",
     )
     assert video["source"] == "manual"
@@ -73,7 +73,7 @@ def test_add_link_without_any_key_uses_public_oembed(client):
     ).json()
     assert (video["title"], video["channel"], video["language"]) == (
         "Catan - Règles du jeu",
-        "Ludochrono",
+        "Ludovox",
         None,
     )
 

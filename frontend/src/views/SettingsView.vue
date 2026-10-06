@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { api, type ImportResult, type Status } from '../api'
+import { api, type ImportResult, type PackPreview, type PackResult, type Status } from '../api'
 import { authState } from '../auth'
 
 const router = useRouter()
@@ -9,10 +9,13 @@ const status = ref<Status | null>(null)
 const result = ref<ImportResult | null>(null)
 const error = ref('')
 const busy = ref(false)
+const pack = ref<PackPreview | null>(null)
+const packResult = ref<PackResult | null>(null)
 
 onMounted(async () => {
   try {
     status.value = await api.status()
+    pack.value = await api.pack()
   } catch (e) {
     error.value = (e as Error).message
   }
@@ -37,6 +40,21 @@ async function pick(event: Event) {
     input.value = ''
   }
 }
+
+async function applyPack() {
+  busy.value = true
+  error.value = ''
+  try {
+    packResult.value = await api.applyPack()
+    pack.value = await api.pack()
+  } catch (e) {
+    error.value = (e as Error).message
+  } finally {
+    busy.value = false
+  }
+}
+
+const owned = computed(() => pack.value?.games.filter((g) => g.game_id !== null) ?? [])
 
 async function logout() {
   await api.logout()
@@ -83,6 +101,37 @@ const yesNo = (on: boolean) => (on ? 'Configuré' : 'Non configuré')
       </p>
     </section>
 
+    <section v-if="pack" class="card stack">
+      <h2>Règles et vidéos prêtes à l'emploi</h2>
+      <p>
+        {{ pack.total }} jeux courants ont déjà une vidéo LudoChrono vérifiée, des règles
+        simplifiées et une fiche débutants. {{ pack.in_collection }} sont dans ta ludothèque.
+      </p>
+      <button class="primary" :disabled="busy || !pack.to_add" @click="applyPack">
+        {{ pack.to_add ? `Compléter ${pack.to_add} jeu(x)` : 'Rien à ajouter pour l’instant' }}
+      </button>
+      <div v-if="packResult" class="notice" role="status">
+        {{ packResult.games }} jeu(x) complété(s) : {{ packResult.videos_added }} vidéo(s) et
+        {{ packResult.sheets_added }} fiche(s) ajoutées.
+      </div>
+      <details v-if="owned.length">
+        <summary>Jeux concernés dans ta ludothèque</summary>
+        <ul class="packlist">
+          <li v-for="entry in owned" :key="entry.name">
+            <RouterLink :to="`/jeux/${entry.game_id}`">{{ entry.game_name }}</RouterLink>
+            <span class="muted small">
+              {{ entry.new_videos || entry.new_sheets ? 'à compléter' : 'déjà complet' }}
+            </span>
+          </li>
+        </ul>
+      </details>
+      <p class="muted small">
+        Les fiches arrivent comme brouillons à relire : elles sont écrites sans le livret sous les
+        yeux, vérifie-les avant de t'en servir. Ce que tu as déjà écrit n'est jamais remplacé, et
+        aucun jeu n'est ajouté à ta ludothèque.
+      </p>
+    </section>
+
     <section class="card stack">
       <h2>Exporter la collection</h2>
       <div class="row">
@@ -118,6 +167,18 @@ const yesNo = (on: boolean) => (on ? 'Configuré' : 'Non configuré')
 </template>
 
 <style scoped>
+.packlist {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+}
+.packlist li {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
 .services {
   list-style: none;
   margin: 0;

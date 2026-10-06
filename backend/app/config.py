@@ -14,7 +14,7 @@ class Settings(BaseSettings):
 
     bgg_token: str = ""
     youtube_api_key: str = ""
-    youtube_channels: str = "Ludochrono"
+    youtube_channels: str = "Ludovox"
     anthropic_api_key: str = ""
     anthropic_model: str = "claude-opus-5-5"
 

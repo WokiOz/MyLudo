@@ -55,7 +55,7 @@ frontend/
 
 ### Vidéos : chaînes cherchées, dans l'ordre
 
-1. Ludochrono
+1. Ludochrono, publié sur la chaîne Ludovox
 2. Autres chaînes francophones ajoutées dans `YOUTUBE_CHANNELS` (à vérifier avant ajout)
 3. Recherche libre « <nom du jeu> règles du jeu » avec `relevanceLanguage=fr`
 
@@ -76,6 +76,7 @@ Un module cassé ne doit jamais faire échouer les autres.
 
 - **HTTPS et caméra** : le scan de code-barres demande HTTPS. Prévoir un reverse proxy (Caddy, Traefik, Nginx Proxy Manager) devant le port 6018.
 - **Quota YouTube** : une recherche de vidéos coûte environ 100 unités sur les 10 000 offertes par jour. Une proposition de vidéos pour un jeu en consomme environ 200 (une recherche par chaîne prioritaire, une recherche libre). Les identifiants de chaînes sont gardés en mémoire.
+- **Paquet de règles et vidéos** : `app/content/rules_pack.json` est livré avec l'image. Il complète seulement les jeux déjà présents (par nom ou alias, sans accents ni casse), sans créer de jeu et sans écraser un texte existant. Les fiches arrivent en brouillon à relire. Les vidéos LudoChrono sont publiées sur la chaîne Ludovox et chaque identifiant a été contrôlé auprès de YouTube.
 - **Brouillons Claude** : un brouillon n'est jamais enregistré tout seul. Il passe dans l'éditeur, reste marqué « à relire » tant que l'utilisateur ne l'a pas validé, et le prompt demande d'écrire « À vérifier dans le livret » plutôt que d'inventer. Si les filtres de sécurité refusent la demande, l'API la rejoue sur un autre modèle (`fallbacks`).
 - **Sécurité** : `APP_PASSWORD` active un mot de passe unique. La session est un cookie signé (HttpOnly, SameSite Lax, 30 jours) invalidé si le mot de passe change. Après 5 échecs en 5 minutes depuis une même adresse, la connexion est bloquée. Seule la sonde `/api/health` reste publique.
 - **Données externes** : BoardGameGeek renvoie noms et catégories en anglais. Les catégories et mécaniques connues sont traduites en tags français (`services/tags.py`), les autres sont ignorées. Les descriptions anglaises ne sont pas importées.
