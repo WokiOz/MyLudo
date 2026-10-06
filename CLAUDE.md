@@ -11,7 +11,8 @@ Modèle de données : `docs/DATA_MODEL.md`. Avancement : `docs/ROADMAP.md`.
 - **Ne jamais recopier un livret de règles.** Les résumés et fiches sont des textes rédigés (droit d'auteur).
 - **Chaque intégration externe est optionnelle.** Sans clé ou si le service est en panne, l'appli reste utilisable en saisie manuelle.
 - **Les scrapers de prix sont désactivés par défaut** et isolés : un module par boutique dans `backend/app/prices/`.
-- **Pas de secret dans le dépôt.** Les clés vont dans `.env` (modèle : `.env.example`).
+- **Pas de secret dans le dépôt.** Les clés vont dans `.env` en local et dans les variables de la stack Portainer en production.
+- **Toute nouvelle variable d'environnement** est ajoutée à la fois dans `.env.example`, `deploy/portainer-stack.yml` et `docs/DEPLOIEMENT.md`.
 - **Rester simple.** Une seule image Docker, SQLite, pas de service supplémentaire sans besoin démontré.
 - **Avancer étape par étape** selon `docs/ROADMAP.md` et cocher ce qui est livré.
 
@@ -21,6 +22,7 @@ Modèle de données : `docs/DATA_MODEL.md`. Avancement : `docs/ROADMAP.md`.
 - Frontend : Vue 3, Vite, TypeScript, vue-router. Interface pensée mobile d'abord.
 - Base : SQLite dans `/data/myludo.db` (volume Docker).
 - Conteneur : image unique, le backend sert l'API sous `/api` et le frontend compilé. Port **6018**.
+- Déploiement : Portainer, stack `deploy/portainer-stack.yml`, image `ghcr.io/wokioz/myludo` publiée par `.github/workflows/docker.yml` (amd64 et arm64). Voir `docs/DEPLOIEMENT.md`.
 
 ## Commandes
 

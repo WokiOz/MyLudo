@@ -6,6 +6,7 @@ Chaque étape est livrable et utilisable seule.
 - [x] Spécification, architecture, modèle de données
 - [x] Squelette backend et frontend
 - [x] Image Docker sur le port 6018
+- [x] Publication de l'image sur GitHub et stack Portainer
 
 ## Étape 1 — Collection
 - [ ] Modèles SQLAlchemy et première migration Alembic

@@ -1,5 +1,6 @@
-# Étape 1 : compilation du frontend
-FROM node:22-alpine AS frontend
+# Étape 1 : compilation du frontend, sur l'architecture de la machine de build
+# car le résultat est du HTML/JS identique pour toutes les architectures
+FROM --platform=$BUILDPLATFORM node:22-alpine AS frontend
 WORKDIR /build
 COPY frontend/package.json frontend/package-lock.json ./
 RUN npm ci

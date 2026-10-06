@@ -1,0 +1,23 @@
+# Stack Portainer : utilise l'image publiée sur GitHub, aucun build sur le serveur.
+# Les variables se renseignent dans Portainer, section « Environment variables ».
+services:
+  myludo:
+    image: ghcr.io/wokioz/myludo:${MYLUDO_TAG:-latest}
+    container_name: myludo
+    ports:
+      - "${MYLUDO_PORT:-6018}:6018"
+    environment:
+      DATABASE_URL: sqlite:////data/myludo.db
+      APP_PASSWORD: ${APP_PASSWORD:-}
+      BGG_TOKEN: ${BGG_TOKEN:-}
+      YOUTUBE_API_KEY: ${YOUTUBE_API_KEY:-}
+      YOUTUBE_CHANNELS: ${YOUTUBE_CHANNELS:-Ludochrono}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      PRICE_SOURCES: ${PRICE_SOURCES:-}
+      PRICE_REFRESH_CRON: ${PRICE_REFRESH_CRON:-0 3 * * *}
+    volumes:
+      - myludo-data:/data
+    restart: unless-stopped
+
+volumes:
+  myludo-data:
