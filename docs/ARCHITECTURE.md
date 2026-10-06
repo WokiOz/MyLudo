@@ -26,14 +26,15 @@ backend/
     main.py            # création de l'app, montage du frontend
     config.py          # paramètres lus depuis l'environnement
     db.py              # moteur SQLAlchemy, session
-    models/            # modèles SQLAlchemy
-    schemas/           # schémas Pydantic
+    models.py          # modèles SQLAlchemy
+    schemas.py         # schémas Pydantic
+    auth.py            # mot de passe unique et session par cookie
     api/               # une route par ressource (games, tags, prices…)
     services/          # logique métier (tags auto, valorisation, similarité)
     integrations/      # clients BGG, YouTube, Claude
     prices/            # un module par boutique + interface commune
     jobs.py            # tâches planifiées
-  migrations/          # Alembic
+    migrations/        # Alembic (appliquées au démarrage)
   tests/
 frontend/
   src/
@@ -47,13 +48,14 @@ frontend/
 | Service | Usage | Clé | Sans clé |
 |---|---|---|---|
 | BoardGameGeek XML API2 | Fiche jeu, mécaniques, poids, recommandations | Jeton BGG (inscription gratuite) | Saisie manuelle |
-| YouTube Data API v3 | Recherche de vidéos de règles | Clé Google gratuite, quota journalier | Liens collés à la main |
+| YouTube (adresse d'intégration) | Titre et chaîne d'un lien collé | Aucune | Titre saisi à la main |
+| YouTube Data API v3 | Propositions de vidéos de règles | Clé Google gratuite, quota journalier | Liens collés et recherche YouTube ouverte dans un onglet |
 | API Claude | Brouillons de règles simplifiées et fiches | Clé Anthropic payante | Rédaction manuelle |
 | Boutiques | Relevé de prix | Aucune | Prix saisis à la main |
 
 ### Vidéos : chaînes cherchées, dans l'ordre
 
-1. Ludochrono
+1. Ludochrono, publié sur la chaîne Ludovox
 2. Autres chaînes francophones ajoutées dans `YOUTUBE_CHANNELS` (à vérifier avant ajout)
 3. Recherche libre « <nom du jeu> règles du jeu » avec `relevanceLanguage=fr`
 
@@ -73,5 +75,9 @@ Un module cassé ne doit jamais faire échouer les autres.
 ## Points d'attention
 
 - **HTTPS et caméra** : le scan de code-barres demande HTTPS. Prévoir un reverse proxy (Caddy, Traefik, Nginx Proxy Manager) devant le port 6018.
-- **Sécurité** : pas d'authentification à l'étape 1 car usage en réseau local. Une variable `APP_PASSWORD` est prévue avant toute exposition sur Internet.
-- **Sauvegarde** : le fichier SQLite du volume suffit. Un export JSON complet sera aussi disponible.
+- **Quota YouTube** : une recherche de vidéos coûte environ 100 unités sur les 10 000 offertes par jour. Une proposition de vidéos pour un jeu en consomme environ 200 (une recherche par chaîne prioritaire, une recherche libre). Les identifiants de chaînes sont gardés en mémoire.
+- **Paquet de règles et vidéos** : `app/content/rules_pack.json` est livré avec l'image. Il complète seulement les jeux déjà présents (par nom ou alias, sans accents ni casse), sans créer de jeu et sans écraser un texte existant. Les fiches arrivent en brouillon à relire. Les vidéos LudoChrono sont publiées sur la chaîne Ludovox et chaque identifiant a été contrôlé auprès de YouTube.
+- **Brouillons Claude** : un brouillon n'est jamais enregistré tout seul. Il passe dans l'éditeur, reste marqué « à relire » tant que l'utilisateur ne l'a pas validé, et le prompt demande d'écrire « À vérifier dans le livret » plutôt que d'inventer. Si les filtres de sécurité refusent la demande, l'API la rejoue sur un autre modèle (`fallbacks`).
+- **Sécurité** : `APP_PASSWORD` active un mot de passe unique. La session est un cookie signé (HttpOnly, SameSite Lax, 30 jours) invalidé si le mot de passe change. Après 5 échecs en 5 minutes depuis une même adresse, la connexion est bloquée. Seule la sonde `/api/health` reste publique.
+- **Données externes** : BoardGameGeek renvoie noms et catégories en anglais. Les catégories et mécaniques connues sont traduites en tags français (`services/tags.py`), les autres sont ignorées. Les descriptions anglaises ne sont pas importées.
+- **Sauvegarde** : le fichier SQLite du volume suffit. L'export JSON complet (Réglages) contient aussi les notes, les tags, les vidéos et les fiches de règles.

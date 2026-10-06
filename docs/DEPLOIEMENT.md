@@ -22,11 +22,13 @@ Portainer se contente de télécharger l'image : rien n'est compilé sur le serv
    | Variable | Rôle |
    |---|---|
    | `BGG_TOKEN` | Import des fiches BoardGameGeek |
-   | `YOUTUBE_API_KEY` | Recherche des vidéos de règles |
-   | `YOUTUBE_CHANNELS` | Chaînes prioritaires, `Ludochrono` par défaut |
+   | `YOUTUBE_API_KEY` | Facultatif : propositions de vidéos dans l'appli. Les liens collés fonctionnent sans clé |
+   | `YOUTUBE_CHANNELS` | Chaînes prioritaires, `Ludovox` par défaut (c'est elle qui publie les LudoChrono) |
    | `ANTHROPIC_API_KEY` | Brouillons de fiches via l'API Claude |
+   | `ANTHROPIC_MODEL` | Modèle des brouillons, `claude-opus-5-5` par défaut. `claude-sonnet-5-5` coûte moins cher |
    | `PRICE_SOURCES` | Modules de prix activés, vide par défaut |
    | `APP_PASSWORD` | Mot de passe, obligatoire si exposé sur Internet |
+   | `FORWARDED_ALLOW_IPS` | Adresse ou réseau du reverse proxy, pour que le blocage après 5 mots de passe faux vise chaque visiteur |
    | `MYLUDO_PORT` | Port de l'hôte, `6018` par défaut |
    | `MYLUDO_TAG` | Version de l'image, `latest` par défaut |
 
@@ -40,6 +42,13 @@ en cochant **Re-pull image** (méthode Web editor). Les données restent dans le
 
 Pour revenir à une version précise, mettre `MYLUDO_TAG` sur un tag `sha-xxxxxxx`
 visible dans l'onglet Packages de GitHub.
+
+## Compléter les règles et vidéos d'un nouveau jeu
+
+1. Ajoute tes jeux dans l'appli.
+2. Dans Réglages, clique sur « Compléter » : les jeux déjà préparés reçoivent leur vidéo et leurs fiches.
+3. Pour les autres, clique sur « Copier la liste » et envoie-la à Claude, qui prépare leurs fiches dans le dépôt.
+4. Une fois la nouvelle version fusionnée, fais « Pull and redeploy » dans Portainer puis clique de nouveau sur « Compléter ».
 
 ## Sauvegarde
 

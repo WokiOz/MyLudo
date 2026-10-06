@@ -7,22 +7,31 @@ Chaque étape est livrable et utilisable seule.
 - [x] Squelette backend et frontend
 - [x] Image Docker sur le port 6018
 - [x] Publication de l'image sur GitHub et stack Portainer
+- [x] Mot de passe d'accès
 
 ## Étape 1 — Collection
-- [ ] Modèles SQLAlchemy et première migration Alembic
-- [ ] CRUD des jeux et extensions
-- [ ] Client BoardGameGeek : recherche, import d'une fiche
-- [ ] Tags automatiques et tags perso
-- [ ] Recherche et filtres
-- [ ] Note, commentaire, aides pour les futures parties
-- [ ] Import et export CSV/JSON
+- [x] Modèles SQLAlchemy et première migration Alembic
+- [x] CRUD des jeux et extensions
+- [x] Client BoardGameGeek : recherche, import d'une fiche (testé sur des réponses simulées)
+- [x] Tags automatiques et tags perso
+- [x] Recherche et filtres
+- [x] Note, commentaire, aides pour les futures parties
+- [x] Import et export CSV/JSON
+- [ ] Vérifier l'import BoardGameGeek avec un vrai jeton
 
 ## Étape 2 — Règles et vidéos
-- [ ] Liens vidéo manuels et lecteur intégré
-- [ ] Recherche YouTube en français, Ludochrono en priorité
-- [ ] Vue règles simplifiées et fiche débutants en Markdown
-- [ ] Brouillon via l'API Claude, optionnel
-- [ ] Version imprimable
+- [x] Liens vidéo manuels et lecteur intégré (chargé au clic, sans cookies de suivi)
+- [x] Recherche YouTube en français, Ludochrono en priorité (testée sur des réponses simulées)
+- [x] Vue règles simplifiées et fiche débutants en Markdown, avec modèles de départ
+- [x] Brouillon via l'API Claude, optionnel et à relire (testé sur des réponses simulées)
+- [x] Version imprimable
+- [x] Vidéos et fiches incluses dans la sauvegarde JSON
+- [x] Liens YouTube sans clé : titre automatique et boutons de recherche préremplie
+- [x] Paquet de 29 jeux courants : vidéo LudoChrono vérifiée, règles simplifiées et fiche débutants, ajoutés en un clic dans Réglages
+- [ ] Relire les fiches du paquet avec les livrets et corriger les chiffres signalés « à vérifier »
+- [x] Liste des jeux à préparer dans Réglages, avec bouton pour la copier
+- [ ] Étendre le paquet aux autres jeux de la ludothèque (à partir de cette liste)
+- [ ] Vérifier la recherche YouTube par clé et le brouillon Claude avec de vraies clés (facultatif)
 
 ## Étape 3 — Prix et valeur
 - [ ] Saisie manuelle des prix et historique

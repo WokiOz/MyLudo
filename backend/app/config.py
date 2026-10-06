@@ -14,11 +14,16 @@ class Settings(BaseSettings):
 
     bgg_token: str = ""
     youtube_api_key: str = ""
-    youtube_channels: str = "Ludochrono"
+    youtube_channels: str = "Ludovox"
     anthropic_api_key: str = ""
+    anthropic_model: str = "claude-opus-5-5"
 
     price_sources: str = ""
     price_refresh_cron: str = "0 3 * * *"
+
+    @property
+    def youtube_channel_names(self) -> list[str]:
+        return [c.strip() for c in self.youtube_channels.split(",") if c.strip()]
 
     @property
     def enabled_price_sources(self) -> list[str]:

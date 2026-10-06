@@ -20,6 +20,7 @@ game ─┬─< game_tag >── tag
 | bgg_id | int, unique, nullable | identifiant BoardGameGeek |
 | name_fr | text | nom affiché |
 | name_original | text | |
+| search_text | text | noms normalisés (sans accents ni majuscules) pour la recherche et le tri |
 | year | int | |
 | publisher | text | |
 | description | text | |
@@ -51,6 +52,7 @@ game ─┬─< game_tag >── tag
 | label | text, unique avec kind |
 
 `game_tag(game_id, tag_id, source)` où `source` vaut `auto` ou `user`. Les tags `auto` sont recalculés, les tags `user` jamais.
+À chaque modification, les tags `difficulty`, `players`, `duration` et `audience` sont recalculés depuis la fiche. Les tags `style` et `mechanic` viennent de l'import BoardGameGeek et ne changent plus ensuite.
 
 ## note_entry
 
@@ -58,7 +60,7 @@ Aides pour les futures parties. `id, game_id, kind (forgotten_rule, common_mista
 
 ## video
 
-`id, game_id, youtube_id, title, channel, language, source (manual, auto), validated (bool), added_at`.
+`id, game_id, youtube_id, title, channel, language, source (manual, auto), validated (bool), added_at`. Une vidéo est unique par jeu. Les propositions de la recherche automatique ne sont pas stockées : seule celle que l'utilisateur ajoute l'est.
 
 ## rule_sheet
 

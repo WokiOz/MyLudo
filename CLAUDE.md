@@ -7,8 +7,9 @@ Modèle de données : `docs/DATA_MODEL.md`. Avancement : `docs/ROADMAP.md`.
 ## Règles du projet
 
 - **Tout le contenu visible est en français** : interface, règles, fiches, messages d'erreur.
-- **Vidéos de règles en français uniquement.** Ludochrono en priorité, puis les chaînes configurées dans `YOUTUBE_CHANNELS`.
+- **Vidéos de règles en français uniquement.** Ludochrono en priorité (publié sur la chaîne Ludovox), puis les chaînes configurées dans `YOUTUBE_CHANNELS`.
 - **Ne jamais recopier un livret de règles.** Les résumés et fiches sont des textes rédigés (droit d'auteur).
+- **Paquet de contenu** (`backend/app/content/rules_pack.json`) : une vidéo n'y entre qu'après contrôle auprès de YouTube (`python backend/scripts/check_pack_videos.py`). Les fiches du paquet arrivent toujours en brouillon à relire, et un chiffre incertain s'écrit « À vérifier dans le livret ».
 - **Chaque intégration externe est optionnelle.** Sans clé ou si le service est en panne, l'appli reste utilisable en saisie manuelle.
 - **Les scrapers de prix sont désactivés par défaut** et isolés : un module par boutique dans `backend/app/prices/`.
 - **Pas de secret dans le dépôt.** Les clés vont dans `.env` en local et dans les variables de la stack Portainer en production.
@@ -18,7 +19,7 @@ Modèle de données : `docs/DATA_MODEL.md`. Avancement : `docs/ROADMAP.md`.
 
 ## Stack
 
-- Backend : Python 3.12, FastAPI, SQLAlchemy 2, Alembic, httpx, APScheduler, pydantic-settings.
+- Backend : Python 3.12, FastAPI, SQLAlchemy 2, Alembic, httpx, SDK `anthropic`, APScheduler, pydantic-settings.
 - Frontend : Vue 3, Vite, TypeScript, vue-router. Interface pensée mobile d'abord.
 - Base : SQLite dans `/data/myludo.db` (volume Docker).
 - Conteneur : image unique, le backend sert l'API sous `/api` et le frontend compilé. Port **6018**.
