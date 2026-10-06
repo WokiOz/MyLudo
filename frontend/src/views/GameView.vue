@@ -227,7 +227,12 @@ watch(gameId, load)
       </div>
     </section>
 
-    <VideoSection :game-id="game.id" :videos="game.videos" @changed="refresh" />
+    <VideoSection
+      :game-id="game.id"
+      :game-name="game.name_fr"
+      :videos="game.videos"
+      @changed="refresh"
+    />
 
     <section class="card stack">
       <h2>Ma note</h2>

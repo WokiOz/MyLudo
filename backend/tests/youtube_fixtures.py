@@ -61,3 +61,24 @@ def youtube_transport(error_reason: str | None = None, status: int = 200) -> htt
         return httpx.Response(200, json={"items": items})
 
     return httpx.MockTransport(handler)
+
+
+PRIVATE = "PPPPPPPPPPP"  # vidéo privée ou supprimée
+DOWN = OTHER  # YouTube répond une erreur pour celle-ci
+
+
+def oembed_transport() -> httpx.MockTransport:
+    """Adresse publique d'intégration : aucune clé n'est envoyée ni attendue."""
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        assert "key" not in request.url.params
+        video_id = request.url.params["url"].rsplit("=", 1)[-1]
+        if video_id == PRIVATE:
+            return httpx.Response(404)
+        if video_id == DOWN:
+            return httpx.Response(500)
+        return httpx.Response(
+            200, json={"title": "Catan - Règles du jeu", "author_name": "Ludochrono"}
+        )
+
+    return httpx.MockTransport(handler)

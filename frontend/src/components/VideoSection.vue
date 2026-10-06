@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { api, type Video, type VideoSuggestion } from '../api'
 import { minutes } from '../labels'
 import VideoPlayer from './VideoPlayer.vue'
 
-const props = defineProps<{ gameId: number; videos: Video[] }>()
+const props = defineProps<{ gameId: number; gameName: string; videos: Video[] }>()
 const emit = defineEmits<{ changed: [] }>()
 
 const url = ref('')
@@ -13,6 +13,28 @@ const suggestions = ref<VideoSuggestion[] | null>(null)
 const busy = ref(false)
 const searching = ref(false)
 const error = ref('')
+const apiSearch = ref(false)
+const channels = ref<string[]>([])
+
+onMounted(async () => {
+  try {
+    const status = await api.status()
+    apiSearch.value = status.integrations.youtube
+    channels.value = status.integrations.youtube_channels
+  } catch {
+    /* sans le statut, seuls les liens de recherche YouTube sont proposés */
+  }
+})
+
+const youtubeSearch = (query: string) =>
+  `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`
+const channelLinks = computed(() =>
+  (channels.value.length ? channels.value : ['Ludochrono']).map((name) => ({
+    name,
+    url: youtubeSearch(`${name} ${props.gameName}`),
+  })),
+)
+const frenchLink = computed(() => youtubeSearch(`${props.gameName} règles du jeu`))
 
 async function guard(action: () => Promise<void>) {
   busy.value = true
@@ -86,10 +108,27 @@ const notFrench = (language: string | null) => !!language && !language.toLowerCa
     <p v-if="error" class="error" role="alert">{{ error }}</p>
 
     <div class="row">
-      <button :disabled="searching" @click="search">
-        {{ searching ? 'Recherche…' : 'Chercher en français' }}
+      <a
+        v-for="link in channelLinks"
+        :key="link.name"
+        class="button"
+        :href="link.url"
+        target="_blank"
+        rel="noopener"
+      >
+        {{ link.name }} sur YouTube ↗
+      </a>
+      <a class="button" :href="frenchLink" target="_blank" rel="noopener">
+        Autres règles en français ↗
+      </a>
+      <button v-if="apiSearch" :disabled="searching" @click="search">
+        {{ searching ? 'Recherche…' : 'Proposer des vidéos ici' }}
       </button>
     </div>
+    <p class="muted small">
+      Ouvre la recherche, choisis une vidéo, puis colle son adresse ci-dessous : aucune clé n'est
+      nécessaire.
+    </p>
 
     <div v-if="suggestions">
       <p v-if="!suggestions.length" class="muted">

@@ -20,6 +20,7 @@ def status() -> dict:
         "integrations": {
             "boardgamegeek": bool(s.bgg_token),
             "youtube": bool(s.youtube_api_key),
+            "youtube_channels": s.youtube_channel_names,
             "claude": bool(s.anthropic_api_key),
             "price_sources": s.enabled_price_sources,
         },

@@ -48,7 +48,8 @@ frontend/
 | Service | Usage | Clé | Sans clé |
 |---|---|---|---|
 | BoardGameGeek XML API2 | Fiche jeu, mécaniques, poids, recommandations | Jeton BGG (inscription gratuite) | Saisie manuelle |
-| YouTube Data API v3 | Recherche de vidéos de règles | Clé Google gratuite, quota journalier | Liens collés à la main |
+| YouTube (adresse d'intégration) | Titre et chaîne d'un lien collé | Aucune | Titre saisi à la main |
+| YouTube Data API v3 | Propositions de vidéos de règles | Clé Google gratuite, quota journalier | Liens collés et recherche YouTube ouverte dans un onglet |
 | API Claude | Brouillons de règles simplifiées et fiches | Clé Anthropic payante | Rédaction manuelle |
 | Boutiques | Relevé de prix | Aucune | Prix saisis à la main |
 

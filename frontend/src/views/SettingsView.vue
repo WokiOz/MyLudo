@@ -78,8 +78,8 @@ const yesNo = (on: boolean) => (on ? 'Configuré' : 'Non configuré')
         </li>
       </ul>
       <p class="muted small">
-        Les clés se règlent dans les variables d'environnement de la stack Portainer. Sans clé,
-        tout reste utilisable à la main.
+        Les clés se règlent dans les variables d'environnement de la stack Portainer. Aucune n'est
+        obligatoire : les vidéos se collent sans clé, et le reste se saisit à la main.
       </p>
     </section>
 

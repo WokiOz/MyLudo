@@ -1,8 +1,23 @@
 import pytest
 
 from app.integrations import youtube
-from app.integrations.youtube import YouTubeClient, YouTubeError, parse_duration, parse_video_id
-from tests.youtube_fixtures import ENGLISH, LUDO, OFFTOPIC, OTHER, youtube_transport
+from app.integrations.youtube import (
+    OEmbedClient,
+    VideoNotFoundError,
+    YouTubeClient,
+    YouTubeError,
+    parse_duration,
+    parse_video_id,
+)
+from tests.youtube_fixtures import (
+    ENGLISH,
+    LUDO,
+    OFFTOPIC,
+    OTHER,
+    PRIVATE,
+    oembed_transport,
+    youtube_transport,
+)
 
 VALID = "dQw4w9WgXcQ"
 
@@ -101,3 +116,26 @@ def test_network_failure_hides_the_key():
     with pytest.raises(YouTubeError) as error:
         client.suggest("Catan", [])
     assert "cle-secrete" not in str(error.value)
+
+
+def test_oembed_needs_no_key():
+    info = OEmbedClient(transport=oembed_transport()).info(LUDO)
+    assert (info.title, info.channel) == ("Catan - Règles du jeu", "Ludochrono")
+
+
+def test_oembed_private_video_and_outage():
+    client = OEmbedClient(transport=oembed_transport())
+    with pytest.raises(VideoNotFoundError):
+        client.info(PRIVATE)
+    assert client.info(OTHER) is None  # erreur 500 : on garde le lien sans détails
+
+
+def test_oembed_network_failure_and_bad_body():
+    import httpx
+
+    def boom(request):
+        raise httpx.ConnectError("hors ligne")
+
+    assert OEmbedClient(transport=httpx.MockTransport(boom)).info(LUDO) is None
+    garbage = httpx.MockTransport(lambda request: httpx.Response(200, text="pas du json"))
+    assert OEmbedClient(transport=garbage).info(LUDO) is None

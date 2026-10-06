@@ -7,7 +7,13 @@ from sqlalchemy.orm import Session
 from app.auth import require_auth
 from app.config import get_settings
 from app.db import get_db
-from app.integrations.youtube import YouTubeClient, YouTubeError, parse_video_id
+from app.integrations.youtube import (
+    OEmbedClient,
+    VideoNotFoundError,
+    YouTubeClient,
+    YouTubeError,
+    parse_video_id,
+)
 from app.models import Game, Video
 from app.schemas import VideoAddIn, VideoOut, VideoPickIn, VideoSuggestion
 from app.services import games as service
@@ -28,6 +34,10 @@ def get_youtube_client() -> YouTubeClient:
 def get_optional_youtube_client() -> YouTubeClient | None:
     key = get_settings().youtube_api_key
     return YouTubeClient(key) if key else None
+
+
+def get_oembed_client() -> OEmbedClient:
+    return OEmbedClient()
 
 
 def _store(db: Session, game: Game, **fields) -> VideoOut:
@@ -73,22 +83,27 @@ def add_video(
     body: VideoAddIn,
     db: Db,
     client: Annotated[YouTubeClient | None, Depends(get_optional_youtube_client)],
+    oembed: Annotated[OEmbedClient, Depends(get_oembed_client)],
 ) -> VideoOut:
-    """Ajoute un lien collé à la main. Titre et chaîne sont complétés si YouTube est configuré."""
+    """Ajoute un lien public. Titre et chaîne sont complétés, avec ou sans clé YouTube."""
     game = service.get_game_or_404(db, game_id)
     youtube_id = parse_video_id(body.url)
     if youtube_id is None:
         raise HTTPException(422, "Ce lien n'est pas une adresse de vidéo YouTube.")
     title, channel, language = (body.title or "").strip() or None, None, None
-    if client is not None:
-        try:
+    try:
+        if client is not None:
             info = next(iter(client.details([youtube_id])), None)
-        except YouTubeError:
-            info = None  # le lien reste utilisable sans ses informations
-        if info is None and title is None:
-            raise HTTPException(422, "YouTube ne connaît pas cette vidéo.")
-        if info is not None:
-            title, channel, language = title or info.title, info.channel, info.language
+            if info is None:
+                raise VideoNotFoundError("Cette vidéo est introuvable ou privée.")
+        else:
+            info = oembed.info(youtube_id)
+    except VideoNotFoundError as error:
+        raise HTTPException(422, str(error)) from error
+    except YouTubeError:
+        info = None  # le lien reste utilisable sans ses détails
+    if info is not None:
+        title, channel, language = title or info.title, info.channel, info.language
     return _store(
         db,
         game,

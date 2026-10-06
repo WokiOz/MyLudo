@@ -26,7 +26,8 @@ Chaque étape est livrable et utilisable seule.
 - [x] Brouillon via l'API Claude, optionnel et à relire (testé sur des réponses simulées)
 - [x] Version imprimable
 - [x] Vidéos et fiches incluses dans la sauvegarde JSON
-- [ ] Vérifier la recherche YouTube et le brouillon Claude avec de vraies clés
+- [x] Liens YouTube sans clé : titre automatique et boutons de recherche préremplie
+- [ ] Vérifier la recherche YouTube par clé et le brouillon Claude avec de vraies clés (facultatif)
 
 ## Étape 3 — Prix et valeur
 - [ ] Saisie manuelle des prix et historique

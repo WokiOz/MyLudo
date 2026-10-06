@@ -132,6 +132,7 @@ export interface Status {
   integrations: {
     boardgamegeek: boolean
     youtube: boolean
+    youtube_channels: string[]
     claude: boolean
     price_sources: string[]
   }

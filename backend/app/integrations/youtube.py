@@ -83,6 +83,38 @@ def _matches_game(title: str, game_name: str) -> bool:
     return found * 2 >= len(words)
 
 
+class VideoNotFoundError(YouTubeError):
+    """La vidéo n'existe pas ou est privée."""
+
+
+class OEmbedClient:
+    """Titre et chaîne d'une vidéo publique, sans clé (adresse d'intégration de YouTube)."""
+
+    def __init__(self, transport: httpx.BaseTransport | None = None):
+        self._client = httpx.Client(timeout=5, transport=transport)
+
+    def info(self, youtube_id: str) -> VideoInfo | None:
+        """Renvoie None si YouTube ne répond pas : le lien reste utilisable sans ses détails."""
+        watch_url = f"https://www.youtube.com/watch?v={youtube_id}"
+        try:
+            response = self._client.get(
+                "https://www.youtube.com/oembed", params={"url": watch_url, "format": "json"}
+            )
+        except httpx.HTTPError:
+            return None
+        if response.status_code == 404:
+            raise VideoNotFoundError("Cette vidéo est introuvable ou privée.")
+        if response.status_code != 200:
+            return None
+        try:
+            data = response.json()
+            return VideoInfo(
+                youtube_id=youtube_id, title=str(data["title"]), channel=data.get("author_name")
+            )
+        except (ValueError, KeyError):
+            return None
+
+
 class YouTubeClient:
     def __init__(self, api_key: str, transport: httpx.BaseTransport | None = None):
         self._key = api_key

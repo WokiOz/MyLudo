@@ -1,6 +1,6 @@
 from app.api.videos import get_optional_youtube_client
 from app.main import app
-from tests.youtube_fixtures import LUDO, OTHER
+from tests.youtube_fixtures import LUDO, OTHER, PRIVATE
 
 
 def make_game(client, name="Catan"):
@@ -64,18 +64,47 @@ def test_add_link_fills_title_from_youtube(client):
     assert video["source"] == "manual"
 
 
-def test_add_link_without_youtube_key_keeps_user_title(client):
+def test_add_link_without_any_key_uses_public_oembed(client):
+    """Sans clé YouTube, le titre et la chaîne viennent de l'adresse publique d'intégration."""
+    app.dependency_overrides[get_optional_youtube_client] = lambda: None
+    game = make_game(client)
+    video = client.post(
+        f"/api/games/{game['id']}/videos", json={"url": f"https://www.youtube.com/watch?v={LUDO}"}
+    ).json()
+    assert (video["title"], video["channel"], video["language"]) == (
+        "Catan - Règles du jeu",
+        "Ludochrono",
+        None,
+    )
+
+
+def test_user_title_wins_over_youtube_title(client):
     app.dependency_overrides[get_optional_youtube_client] = lambda: None
     game = make_game(client)
     response = client.post(
         f"/api/games/{game['id']}/videos",
-        json={"url": f"https://www.youtube.com/watch?v={LUDO}", "title": "  Ma vidéo "},
+        json={"url": f"https://youtu.be/{LUDO}", "title": "  Ma vidéo "},
     )
     assert response.status_code == 201 and response.json()["title"] == "Ma vidéo"
-    other = client.post(
+
+
+def test_link_is_kept_when_youtube_is_down(client):
+    app.dependency_overrides[get_optional_youtube_client] = lambda: None
+    game = make_game(client)
+    video = client.post(
         f"/api/games/{game['id']}/videos", json={"url": f"https://youtu.be/{OTHER}"}
     ).json()
-    assert other["title"] == "Vidéo YouTube" and other["channel"] is None
+    assert video["title"] == "Vidéo YouTube" and video["channel"] is None
+
+
+def test_private_or_deleted_video_is_refused(client):
+    app.dependency_overrides[get_optional_youtube_client] = lambda: None
+    game = make_game(client)
+    response = client.post(
+        f"/api/games/{game['id']}/videos", json={"url": f"https://youtu.be/{PRIVATE}", "title": "x"}
+    )
+    assert response.status_code == 422 and "introuvable" in response.json()["detail"]
+    assert client.get(f"/api/games/{game['id']}").json()["videos"] == []
 
 
 def test_add_link_rejects_bad_and_duplicate_links(client):

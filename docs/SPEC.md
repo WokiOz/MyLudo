@@ -31,10 +31,8 @@ Usage principal sur téléphone, accès sur le réseau local.
 
 ## 4. Vidéos de règles
 
-- Ajouter manuellement des liens YouTube, lus directement dans la fiche.
-- Recherche automatique en français : Ludochrono en priorité, puis autres chaînes francophones de règles.
-- Les résultats automatiques sont des propositions, l'utilisateur valide avant enregistrement.
-- Nécessite une clé YouTube Data API. Sans clé, seule la saisie manuelle est proposée.
+- **Sans aucune clé** : on colle l'adresse publique d'une vidéo YouTube. Le titre et la chaîne se remplissent tout seuls, la vidéo se lit dans la fiche. Des boutons ouvrent YouTube sur une recherche déjà écrite (Ludochrono + nom du jeu, ou règles en français).
+- **Facultatif, avec une clé YouTube Data API** : l'appli propose elle-même des vidéos en français, Ludochrono en priorité. L'utilisateur valide avant enregistrement.
 
 ## 5. Règles simplifiées et fiches débutants
 
