@@ -1,13 +1,23 @@
+from contextlib import asynccontextmanager
 from pathlib import Path
 
 from fastapi import FastAPI
 from fastapi.responses import FileResponse
 
-from app.api import health
+from app.api import auth, bgg, exchange, games, health
 from app.config import get_settings
+from app.db import run_migrations
 
-app = FastAPI(title="MyLudo", version="0.1.0")
-app.include_router(health.router)
+
+@asynccontextmanager
+async def lifespan(_app: FastAPI):
+    run_migrations()
+    yield
+
+
+app = FastAPI(title="MyLudo", version="0.2.0", lifespan=lifespan)
+for module in (health, auth, games, bgg, exchange):
+    app.include_router(module.router)
 
 static_dir = Path(get_settings().static_dir)
 

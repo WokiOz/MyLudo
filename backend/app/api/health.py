@@ -1,5 +1,6 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
 
+from app.auth import require_auth
 from app.config import get_settings
 
 router = APIRouter(prefix="/api", tags=["santé"])
@@ -7,10 +8,15 @@ router = APIRouter(prefix="/api", tags=["santé"])
 
 @router.get("/health")
 def health() -> dict:
-    """État de l'appli et des intégrations configurées."""
+    """Sonde publique, utilisée par Docker."""
+    return {"status": "ok"}
+
+
+@router.get("/status", dependencies=[Depends(require_auth)])
+def status() -> dict:
+    """Intégrations configurées."""
     s = get_settings()
     return {
-        "status": "ok",
         "integrations": {
             "boardgamegeek": bool(s.bgg_token),
             "youtube": bool(s.youtube_api_key),

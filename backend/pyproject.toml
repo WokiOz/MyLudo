@@ -11,6 +11,7 @@ dependencies = [
   "pydantic-settings>=2.4",
   "httpx>=0.27",
   "apscheduler>=3.10,<4",
+  "defusedxml>=0.7",
 ]
 
 [project.optional-dependencies]
@@ -28,3 +29,4 @@ testpaths = ["tests"]
 
 [tool.ruff]
 line-length = 100
+extend-exclude = ["app/migrations/versions"]

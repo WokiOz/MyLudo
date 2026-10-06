@@ -20,6 +20,7 @@ game ─┬─< game_tag >── tag
 | bgg_id | int, unique, nullable | identifiant BoardGameGeek |
 | name_fr | text | nom affiché |
 | name_original | text | |
+| search_text | text | noms normalisés (sans accents ni majuscules) pour la recherche et le tri |
 | year | int | |
 | publisher | text | |
 | description | text | |
@@ -51,6 +52,7 @@ game ─┬─< game_tag >── tag
 | label | text, unique avec kind |
 
 `game_tag(game_id, tag_id, source)` où `source` vaut `auto` ou `user`. Les tags `auto` sont recalculés, les tags `user` jamais.
+À chaque modification, les tags `difficulty`, `players`, `duration` et `audience` sont recalculés depuis la fiche. Les tags `style` et `mechanic` viennent de l'import BoardGameGeek et ne changent plus ensuite.
 
 ## note_entry
 

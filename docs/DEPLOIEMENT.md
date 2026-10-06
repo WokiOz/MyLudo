@@ -27,6 +27,7 @@ Portainer se contente de télécharger l'image : rien n'est compilé sur le serv
    | `ANTHROPIC_API_KEY` | Brouillons de fiches via l'API Claude |
    | `PRICE_SOURCES` | Modules de prix activés, vide par défaut |
    | `APP_PASSWORD` | Mot de passe, obligatoire si exposé sur Internet |
+   | `FORWARDED_ALLOW_IPS` | Adresse ou réseau du reverse proxy, pour que le blocage après 5 mots de passe faux vise chaque visiteur |
    | `MYLUDO_PORT` | Port de l'hôte, `6018` par défaut |
    | `MYLUDO_TAG` | Version de l'image, `latest` par défaut |
 

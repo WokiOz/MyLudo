@@ -7,15 +7,17 @@ Chaque étape est livrable et utilisable seule.
 - [x] Squelette backend et frontend
 - [x] Image Docker sur le port 6018
 - [x] Publication de l'image sur GitHub et stack Portainer
+- [x] Mot de passe d'accès
 
 ## Étape 1 — Collection
-- [ ] Modèles SQLAlchemy et première migration Alembic
-- [ ] CRUD des jeux et extensions
-- [ ] Client BoardGameGeek : recherche, import d'une fiche
-- [ ] Tags automatiques et tags perso
-- [ ] Recherche et filtres
-- [ ] Note, commentaire, aides pour les futures parties
-- [ ] Import et export CSV/JSON
+- [x] Modèles SQLAlchemy et première migration Alembic
+- [x] CRUD des jeux et extensions
+- [x] Client BoardGameGeek : recherche, import d'une fiche (testé sur des réponses simulées)
+- [x] Tags automatiques et tags perso
+- [x] Recherche et filtres
+- [x] Note, commentaire, aides pour les futures parties
+- [x] Import et export CSV/JSON
+- [ ] Vérifier l'import BoardGameGeek avec un vrai jeton
 
 ## Étape 2 — Règles et vidéos
 - [ ] Liens vidéo manuels et lecteur intégré

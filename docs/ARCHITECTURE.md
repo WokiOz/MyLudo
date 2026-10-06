@@ -26,14 +26,15 @@ backend/
     main.py            # création de l'app, montage du frontend
     config.py          # paramètres lus depuis l'environnement
     db.py              # moteur SQLAlchemy, session
-    models/            # modèles SQLAlchemy
-    schemas/           # schémas Pydantic
+    models.py          # modèles SQLAlchemy
+    schemas.py         # schémas Pydantic
+    auth.py            # mot de passe unique et session par cookie
     api/               # une route par ressource (games, tags, prices…)
     services/          # logique métier (tags auto, valorisation, similarité)
     integrations/      # clients BGG, YouTube, Claude
     prices/            # un module par boutique + interface commune
     jobs.py            # tâches planifiées
-  migrations/          # Alembic
+    migrations/        # Alembic (appliquées au démarrage)
   tests/
 frontend/
   src/
@@ -73,5 +74,6 @@ Un module cassé ne doit jamais faire échouer les autres.
 ## Points d'attention
 
 - **HTTPS et caméra** : le scan de code-barres demande HTTPS. Prévoir un reverse proxy (Caddy, Traefik, Nginx Proxy Manager) devant le port 6018.
-- **Sécurité** : pas d'authentification à l'étape 1 car usage en réseau local. Une variable `APP_PASSWORD` est prévue avant toute exposition sur Internet.
-- **Sauvegarde** : le fichier SQLite du volume suffit. Un export JSON complet sera aussi disponible.
+- **Sécurité** : `APP_PASSWORD` active un mot de passe unique. La session est un cookie signé (HttpOnly, SameSite Lax, 30 jours) invalidé si le mot de passe change. Après 5 échecs en 5 minutes depuis une même adresse, la connexion est bloquée. Seule la sonde `/api/health` reste publique.
+- **Données externes** : BoardGameGeek renvoie noms et catégories en anglais. Les catégories et mécaniques connues sont traduites en tags français (`services/tags.py`), les autres sont ignorées. Les descriptions anglaises ne sont pas importées.
+- **Sauvegarde** : le fichier SQLite du volume suffit. L'export JSON complet (Réglages) contient aussi les notes et les tags.
