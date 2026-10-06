@@ -1,0 +1,16 @@
+services:
+  myludo:
+    build: .
+    image: myludo:latest
+    container_name: myludo
+    ports:
+      - "6018:6018"
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      - myludo-data:/data
+    restart: unless-stopped
+
+volumes:
+  myludo-data:
