@@ -18,7 +18,7 @@ Modèle de données : `docs/DATA_MODEL.md`. Avancement : `docs/ROADMAP.md`.
 
 ## Stack
 
-- Backend : Python 3.12, FastAPI, SQLAlchemy 2, Alembic, httpx, APScheduler, pydantic-settings.
+- Backend : Python 3.12, FastAPI, SQLAlchemy 2, Alembic, httpx, SDK `anthropic`, APScheduler, pydantic-settings.
 - Frontend : Vue 3, Vite, TypeScript, vue-router. Interface pensée mobile d'abord.
 - Base : SQLite dans `/data/myludo.db` (volume Docker).
 - Conteneur : image unique, le backend sert l'API sous `/api` et le frontend compilé. Port **6018**.

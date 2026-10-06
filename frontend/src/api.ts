@@ -67,6 +67,42 @@ export interface GameFields {
   comment: string | null
 }
 
+export type RuleKind = 'summary' | 'beginner_guide'
+
+export interface Video {
+  id: number
+  youtube_id: string
+  title: string
+  channel: string | null
+  language: string | null
+  source: 'manual' | 'auto'
+  added_at: string
+}
+
+export interface VideoSuggestion {
+  youtube_id: string
+  title: string
+  channel: string | null
+  language: string | null
+  duration_seconds: number | null
+  priority: boolean
+  already_added: boolean
+}
+
+export interface RuleSheet {
+  kind: RuleKind
+  content_md: string
+  origin: 'manual' | 'ai_draft'
+  reviewed: boolean
+  updated_at: string
+}
+
+export interface RuleMeta {
+  kind: RuleKind
+  origin: 'manual' | 'ai_draft'
+  reviewed: boolean
+}
+
 export interface GameDetail extends GameFields {
   id: number
   created_at: string
@@ -74,6 +110,8 @@ export interface GameDetail extends GameFields {
   tags: Tag[]
   notes: Note[]
   extensions: { id: number; name_fr: string }[]
+  videos: Video[]
+  rules: RuleMeta[]
 }
 
 export interface BggHit {
@@ -188,6 +226,31 @@ export const api = {
   bggSearch: (q: string) => request<BggHit[]>('GET', `/bgg/search${query({ q })}`),
   bggImport: (bgg_id: number, status: GameStatus) =>
     request<GameDetail>('POST', '/bgg/import', { bgg_id, status }),
+
+  videoSuggestions: (id: number) =>
+    request<VideoSuggestion[]>('GET', `/games/${id}/videos/suggestions`),
+  addVideo: (id: number, url: string, title: string) =>
+    request<Video>('POST', `/games/${id}/videos`, { url, title: title || null }),
+  pickVideo: (id: number, video: VideoSuggestion) =>
+    request<Video>('POST', `/games/${id}/videos/pick`, {
+      youtube_id: video.youtube_id,
+      title: video.title,
+      channel: video.channel,
+      language: video.language,
+    }),
+  deleteVideo: (videoId: number) => request<void>('DELETE', `/videos/${videoId}`),
+
+  rules: (id: number) => request<RuleSheet[]>('GET', `/games/${id}/rules`),
+  ruleTemplates: () => request<Record<RuleKind, string>>('GET', '/rules/templates'),
+  saveRule: (
+    id: number,
+    kind: RuleKind,
+    content_md: string,
+    origin: 'manual' | 'ai_draft',
+    reviewed: boolean,
+  ) => request<void>('PUT', `/games/${id}/rules/${kind}`, { content_md, origin, reviewed }),
+  draftRule: (id: number, kind: RuleKind) =>
+    request<{ content_md: string }>('POST', `/games/${id}/rules/${kind}/draft`),
 
   importCsv: (text: string) => request<ImportResult>('POST', '/import/csv', text, true),
   importJson: (text: string) => request<ImportResult>('POST', '/import/json', text, true),

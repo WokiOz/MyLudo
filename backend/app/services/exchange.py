@@ -8,8 +8,8 @@ from pydantic import BaseModel, Field, ValidationError
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from app.models import Game
-from app.schemas import GameBase, NoteIn
+from app.models import Game, RuleSheet, Video
+from app.schemas import GameBase, NoteIn, RuleKind
 from app.services import games as service
 
 EXPORTED_TAG_KINDS = ("style", "mechanic", "custom")
@@ -34,10 +34,27 @@ class ImportTag(BaseModel):
     source: str = "user"
 
 
+class ImportVideo(BaseModel):
+    youtube_id: str = Field(pattern=r"^[A-Za-z0-9_-]{11}$")
+    title: str = Field(min_length=1, max_length=300)
+    channel: str | None = None
+    language: str | None = None
+    source: str = "manual"
+
+
+class ImportRule(BaseModel):
+    kind: RuleKind
+    content_md: str = Field(min_length=1, max_length=20000)
+    origin: str = "manual"
+    reviewed: bool = True
+
+
 class ImportGame(GameBase):
     base_game_name: str | None = None
     tags: list[ImportTag] = Field(default_factory=list)
     notes: list[NoteIn] = Field(default_factory=list)
+    videos: list[ImportVideo] = Field(default_factory=list)
+    rules: list[ImportRule] = Field(default_factory=list)
 
 
 class ImportFile(BaseModel):
@@ -59,6 +76,25 @@ def export_json(db: Session) -> dict:
             if link.tag.kind in EXPORTED_TAG_KINDS
         ]
         data["notes"] = [{"kind": n.kind, "text": n.text} for n in game.notes]
+        data["videos"] = [
+            {
+                "youtube_id": v.youtube_id,
+                "title": v.title,
+                "channel": v.channel,
+                "language": v.language,
+                "source": v.source,
+            }
+            for v in game.videos
+        ]
+        data["rules"] = [
+            {
+                "kind": r.kind,
+                "content_md": r.content_md,
+                "origin": r.origin,
+                "reviewed": r.reviewed,
+            }
+            for r in game.rule_sheets
+        ]
         out.append(data)
     return {"version": 1, "games": out}
 
@@ -116,6 +152,10 @@ def import_json(db: Session, payload: ImportFile) -> dict:
                 service.add_custom_tag(db, game, tag.label)
         for note in item.notes:
             service.add_note(db, game, note.kind, note.text)
+        for video in {v.youtube_id: v for v in item.videos}.values():
+            game.videos.append(Video(**video.model_dump()))
+        for rule in {r.kind: r for r in item.rules}.values():
+            game.rule_sheets.append(RuleSheet(**rule.model_dump()))
         if item.base_game_name:
             pending_bases.append((game, item.base_game_name))
         created += 1

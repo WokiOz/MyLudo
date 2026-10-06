@@ -60,7 +60,7 @@ Aides pour les futures parties. `id, game_id, kind (forgotten_rule, common_mista
 
 ## video
 
-`id, game_id, youtube_id, title, channel, language, source (manual, auto), validated (bool), added_at`.
+`id, game_id, youtube_id, title, channel, language, source (manual, auto), validated (bool), added_at`. Une vidéo est unique par jeu. Les propositions de la recherche automatique ne sont pas stockées : seule celle que l'utilisateur ajoute l'est.
 
 ## rule_sheet
 

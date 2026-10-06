@@ -90,7 +90,7 @@ const yesNo = (on: boolean) => (on ? 'Configuré' : 'Non configuré')
         <a class="button" href="/api/export/games.csv" download>Tableur (CSV)</a>
       </div>
       <p class="muted small">
-        Le JSON contient aussi les notes et les tags : c'est celui à garder en sauvegarde.
+        Le JSON contient aussi les notes, les tags, les vidéos et les fiches de règles : c'est celui à garder en sauvegarde.
       </p>
     </section>
 

@@ -1,4 +1,4 @@
-import type { GameStatus, NoteKind } from './api'
+import type { GameStatus, NoteKind, RuleKind } from './api'
 
 export const statusLabels: Record<GameStatus, string> = {
   owned: 'Possédé',
@@ -46,4 +46,16 @@ export function duration(min: number | null, max: number | null): string {
 export function euros(cents: number | null): string {
   if (cents === null) return ''
   return new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(cents / 100)
+}
+
+export const ruleKinds: { value: RuleKind; label: string; hint: string }[] = [
+  { value: 'summary', label: 'Règles simplifiées', hint: 'L’essentiel pour jouer en deux minutes' },
+  { value: 'beginner_guide', label: 'Fiche débutants', hint: 'Pour expliquer le jeu à de nouveaux joueurs' },
+]
+
+export function minutes(seconds: number | null): string {
+  if (seconds === null) return ''
+  const h = Math.floor(seconds / 3600)
+  const m = Math.round((seconds % 3600) / 60)
+  return h ? `${h} h ${String(m).padStart(2, '0')}` : `${m} min`
 }

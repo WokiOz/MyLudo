@@ -4,7 +4,7 @@ from pathlib import Path
 from fastapi import FastAPI
 from fastapi.responses import FileResponse
 
-from app.api import auth, bgg, exchange, games, health
+from app.api import auth, bgg, exchange, games, health, rules, videos
 from app.config import get_settings
 from app.db import run_migrations
 
@@ -15,8 +15,8 @@ async def lifespan(_app: FastAPI):
     yield
 
 
-app = FastAPI(title="MyLudo", version="0.2.0", lifespan=lifespan)
-for module in (health, auth, games, bgg, exchange):
+app = FastAPI(title="MyLudo", version="0.3.0", lifespan=lifespan)
+for module in (health, auth, games, bgg, exchange, videos, rules):
     app.include_router(module.router)
 
 static_dir = Path(get_settings().static_dir)

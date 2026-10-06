@@ -10,6 +10,11 @@ const router = createRouter({
     { path: '/', component: () => import('./views/CollectionView.vue') },
     { path: '/ajouter', component: () => import('./views/AddGameView.vue') },
     { path: '/jeux/:id(\\d+)', component: () => import('./views/GameView.vue'), props: true },
+    {
+      path: '/jeux/:id(\\d+)/regles',
+      component: () => import('./views/RulesView.vue'),
+      props: true,
+    },
     { path: '/reglages', component: () => import('./views/SettingsView.vue') },
     { path: '/connexion', component: () => import('./views/LoginView.vue') },
     { path: '/:rest(.*)*', redirect: '/' },

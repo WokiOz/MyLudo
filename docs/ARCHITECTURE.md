@@ -74,6 +74,8 @@ Un module cassé ne doit jamais faire échouer les autres.
 ## Points d'attention
 
 - **HTTPS et caméra** : le scan de code-barres demande HTTPS. Prévoir un reverse proxy (Caddy, Traefik, Nginx Proxy Manager) devant le port 6018.
+- **Quota YouTube** : une recherche de vidéos coûte environ 100 unités sur les 10 000 offertes par jour. Une proposition de vidéos pour un jeu en consomme environ 200 (une recherche par chaîne prioritaire, une recherche libre). Les identifiants de chaînes sont gardés en mémoire.
+- **Brouillons Claude** : un brouillon n'est jamais enregistré tout seul. Il passe dans l'éditeur, reste marqué « à relire » tant que l'utilisateur ne l'a pas validé, et le prompt demande d'écrire « À vérifier dans le livret » plutôt que d'inventer. Si les filtres de sécurité refusent la demande, l'API la rejoue sur un autre modèle (`fallbacks`).
 - **Sécurité** : `APP_PASSWORD` active un mot de passe unique. La session est un cookie signé (HttpOnly, SameSite Lax, 30 jours) invalidé si le mot de passe change. Après 5 échecs en 5 minutes depuis une même adresse, la connexion est bloquée. Seule la sonde `/api/health` reste publique.
 - **Données externes** : BoardGameGeek renvoie noms et catégories en anglais. Les catégories et mécaniques connues sont traduites en tags français (`services/tags.py`), les autres sont ignorées. Les descriptions anglaises ne sont pas importées.
-- **Sauvegarde** : le fichier SQLite du volume suffit. L'export JSON complet (Réglages) contient aussi les notes et les tags.
+- **Sauvegarde** : le fichier SQLite du volume suffit. L'export JSON complet (Réglages) contient aussi les notes, les tags, les vidéos et les fiches de règles.

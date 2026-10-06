@@ -6,6 +6,7 @@ from pydantic import BaseModel, Field, model_validator
 Status = Literal["owned", "lent", "wishlist", "sold"]
 Condition = Literal["new", "very_good", "good", "worn"]
 NoteKind = Literal["forgotten_rule", "common_mistake", "strategy", "house_rule"]
+RuleKind = Literal["summary", "beginner_guide"]
 
 
 class GameBase(BaseModel):
@@ -93,6 +94,62 @@ class ExtensionOut(BaseModel):
     name_fr: str
 
 
+class VideoOut(BaseModel):
+    id: int
+    youtube_id: str
+    title: str
+    channel: str | None
+    language: str | None
+    source: str
+    added_at: datetime
+
+
+class VideoAddIn(BaseModel):
+    url: str = Field(min_length=1, max_length=300)
+    title: str | None = Field(default=None, max_length=300)
+
+
+class VideoPickIn(BaseModel):
+    youtube_id: str = Field(pattern=r"^[A-Za-z0-9_-]{11}$")
+    title: str = Field(min_length=1, max_length=300)
+    channel: str | None = Field(default=None, max_length=200)
+    language: str | None = Field(default=None, max_length=8)
+
+
+class VideoSuggestion(BaseModel):
+    youtube_id: str
+    title: str
+    channel: str | None
+    language: str | None
+    duration_seconds: int | None
+    priority: bool
+    already_added: bool
+
+
+class RuleSheetIn(BaseModel):
+    content_md: str = Field(max_length=20000)
+    origin: Literal["manual", "ai_draft"] = "manual"
+    reviewed: bool = True
+
+
+class RuleSheetOut(BaseModel):
+    kind: RuleKind
+    content_md: str
+    origin: str
+    reviewed: bool
+    updated_at: datetime
+
+
+class RuleSheetMeta(BaseModel):
+    kind: RuleKind
+    origin: str
+    reviewed: bool
+
+
+class RuleDraftOut(BaseModel):
+    content_md: str
+
+
 class GameDetail(GameBase):
     id: int
     created_at: datetime
@@ -100,6 +157,8 @@ class GameDetail(GameBase):
     tags: list[TagOut]
     notes: list[NoteOut]
     extensions: list[ExtensionOut]
+    videos: list[VideoOut]
+    rules: list[RuleSheetMeta]
 
 
 class CustomTagIn(BaseModel):

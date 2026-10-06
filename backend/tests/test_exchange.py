@@ -109,3 +109,42 @@ def test_csv_duplicate_of_imported_game_is_skipped(client):
     client.post("/api/bgg/import", json={"bgg_id": 13})
     result = client.post("/api/import/csv", content=b"name_fr\ncatan\n").json()
     assert result["created"] == 0 and result["skipped"] == 1
+
+
+def test_json_backup_keeps_videos_and_rules(make_client):
+    source = make_client()
+    game = source.post("/api/games", json={"name_fr": "Dixit"}).json()
+    source.post(f"/api/games/{game['id']}/videos", json={"url": "https://youtu.be/AAAAAAAAAAA"})
+    source.put(
+        f"/api/games/{game['id']}/rules/beginner_guide",
+        json={"content_md": "## Brouillon", "origin": "ai_draft", "reviewed": False},
+    )
+    exported = source.get("/api/export/games.json").content
+
+    target = make_client()
+    assert target.post("/api/import/json", content=exported).json()["created"] == 1
+    imported = target.get(f"/api/games/{target.get('/api/games').json()[0]['id']}").json()
+    assert [v["youtube_id"] for v in imported["videos"]] == ["AAAAAAAAAAA"]
+    assert imported["rules"] == [
+        {"kind": "beginner_guide", "origin": "ai_draft", "reviewed": False}
+    ]
+
+
+def test_json_import_tolerates_repeated_videos_and_rules(client):
+    payload = {
+        "games": [
+            {
+                "name_fr": "Dixit",
+                "videos": [
+                    {"youtube_id": "AAAAAAAAAAA", "title": "a"},
+                    {"youtube_id": "AAAAAAAAAAA", "title": "b"},
+                ],
+                "rules": [
+                    {"kind": "summary", "content_md": "un"},
+                    {"kind": "summary", "content_md": "deux"},
+                ],
+            }
+        ]
+    }
+    result = client.post("/api/import/json", content=json.dumps(payload).encode())
+    assert result.status_code == 200 and result.json()["created"] == 1

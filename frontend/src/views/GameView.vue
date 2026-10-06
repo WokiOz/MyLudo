@@ -3,12 +3,14 @@ import { computed, onMounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { api, type GameDetail, type GameFields, type GameStatus, type NoteKind } from '../api'
 import GameForm from '../components/GameForm.vue'
+import VideoSection from '../components/VideoSection.vue'
 import {
   conditionLabels,
   duration,
   euros,
   noteKinds,
   players,
+  ruleKinds,
   statusLabels,
   tagKindLabels,
 } from '../labels'
@@ -53,6 +55,19 @@ async function run(action: () => Promise<void>) {
     busy.value = false
   }
 }
+
+const refresh = () => run(async () => show(await api.game(gameId.value)))
+
+const ruleLinks = computed(() =>
+  ruleKinds.map((kind) => {
+    const meta = game.value?.rules.find((r) => r.kind === kind.value)
+    return {
+      ...kind,
+      exists: !!meta,
+      unreviewed: !!meta && meta.origin === 'ai_draft' && !meta.reviewed,
+    }
+  }),
+)
 
 const patch = (fields: Partial<GameFields>) =>
   run(async () => show(await api.updateGame(gameId.value, fields)))
@@ -194,6 +209,25 @@ watch(gameId, load)
         </template>
       </p>
     </section>
+
+    <section class="card stack">
+      <h2>Règles et fiches</h2>
+      <div class="row">
+        <RouterLink
+          v-for="link in ruleLinks"
+          :key="link.value"
+          :to="{ path: `/jeux/${game.id}/regles`, query: { fiche: link.value } }"
+          class="button"
+          :class="{ primary: link.exists }"
+        >
+          {{ link.label }}
+          <span v-if="!link.exists" class="muted small">à rédiger</span>
+          <span v-else-if="link.unreviewed" class="small">brouillon à relire</span>
+        </RouterLink>
+      </div>
+    </section>
+
+    <VideoSection :game-id="game.id" :videos="game.videos" @changed="refresh" />
 
     <section class="card stack">
       <h2>Ma note</h2>

@@ -13,7 +13,9 @@ from app.schemas import (
     GameDetail,
     GameSummary,
     NoteOut,
+    RuleSheetMeta,
     TagOut,
+    VideoOut,
 )
 from app.services.tags import KIND_ORDER, derive_tags, get_or_create_tag, sync_auto_tags
 
@@ -127,6 +129,11 @@ def detail(db: Session, game: Game) -> GameDetail:
         tags=_sorted_tags(game),
         notes=[NoteOut.model_validate(n, from_attributes=True) for n in game.notes],
         extensions=[ExtensionOut(id=i, name_fr=n) for i, n in extensions],
+        videos=[VideoOut.model_validate(v, from_attributes=True) for v in game.videos],
+        rules=[
+            RuleSheetMeta(kind=r.kind, origin=r.origin, reviewed=r.reviewed)
+            for r in game.rule_sheets
+        ],
     )
 
 

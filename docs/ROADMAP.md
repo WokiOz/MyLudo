@@ -20,11 +20,13 @@ Chaque étape est livrable et utilisable seule.
 - [ ] Vérifier l'import BoardGameGeek avec un vrai jeton
 
 ## Étape 2 — Règles et vidéos
-- [ ] Liens vidéo manuels et lecteur intégré
-- [ ] Recherche YouTube en français, Ludochrono en priorité
-- [ ] Vue règles simplifiées et fiche débutants en Markdown
-- [ ] Brouillon via l'API Claude, optionnel
-- [ ] Version imprimable
+- [x] Liens vidéo manuels et lecteur intégré (chargé au clic, sans cookies de suivi)
+- [x] Recherche YouTube en français, Ludochrono en priorité (testée sur des réponses simulées)
+- [x] Vue règles simplifiées et fiche débutants en Markdown, avec modèles de départ
+- [x] Brouillon via l'API Claude, optionnel et à relire (testé sur des réponses simulées)
+- [x] Version imprimable
+- [x] Vidéos et fiches incluses dans la sauvegarde JSON
+- [ ] Vérifier la recherche YouTube et le brouillon Claude avec de vraies clés
 
 ## Étape 3 — Prix et valeur
 - [ ] Saisie manuelle des prix et historique

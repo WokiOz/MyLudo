@@ -25,6 +25,7 @@ Portainer se contente de télécharger l'image : rien n'est compilé sur le serv
    | `YOUTUBE_API_KEY` | Recherche des vidéos de règles |
    | `YOUTUBE_CHANNELS` | Chaînes prioritaires, `Ludochrono` par défaut |
    | `ANTHROPIC_API_KEY` | Brouillons de fiches via l'API Claude |
+   | `ANTHROPIC_MODEL` | Modèle des brouillons, `claude-opus-5-5` par défaut. `claude-sonnet-5-5` coûte moins cher |
    | `PRICE_SOURCES` | Modules de prix activés, vide par défaut |
    | `APP_PASSWORD` | Mot de passe, obligatoire si exposé sur Internet |
    | `FORWARDED_ALLOW_IPS` | Adresse ou réseau du reverse proxy, pour que le blocage après 5 mots de passe faux vise chaque visiteur |

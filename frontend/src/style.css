@@ -245,3 +245,24 @@ button.chip {
   margin: 0;
   list-style: none;
 }
+
+@media print {
+  :root {
+    --bg: #fff;
+    --surface: #fff;
+    --text: #000;
+    --line: #ccc;
+  }
+  .bar,
+  .no-print {
+    display: none !important;
+  }
+  .page {
+    padding: 0;
+    max-width: none;
+  }
+  .card {
+    border: 0;
+    padding: 0;
+  }
+}

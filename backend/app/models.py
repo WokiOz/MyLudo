@@ -58,6 +58,49 @@ class Game(Base):
     notes: Mapped[list["NoteEntry"]] = relationship(
         back_populates="game", cascade="all, delete-orphan", order_by="NoteEntry.id"
     )
+    videos: Mapped[list["Video"]] = relationship(
+        back_populates="game", cascade="all, delete-orphan", order_by="Video.id"
+    )
+    rule_sheets: Mapped[list["RuleSheet"]] = relationship(
+        back_populates="game", cascade="all, delete-orphan", order_by="RuleSheet.id"
+    )
+
+
+class Video(Base):
+    __tablename__ = "video"
+    __table_args__ = (UniqueConstraint("game_id", "youtube_id"),)
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    game_id: Mapped[int] = mapped_column(ForeignKey("game.id", ondelete="CASCADE"), index=True)
+    youtube_id: Mapped[str] = mapped_column(String(16))
+    title: Mapped[str] = mapped_column(String(300))
+    channel: Mapped[str | None] = mapped_column(String(200))
+    language: Mapped[str | None] = mapped_column(String(8))
+    # manual : lien collé par l'utilisateur, auto : proposition validée
+    source: Mapped[str] = mapped_column(String(8), default="manual")
+    validated: Mapped[bool] = mapped_column(default=True)
+    added_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
+
+    game: Mapped["Game"] = relationship(back_populates="videos")
+
+
+class RuleSheet(Base):
+    __tablename__ = "rule_sheet"
+    __table_args__ = (UniqueConstraint("game_id", "kind"),)
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    game_id: Mapped[int] = mapped_column(ForeignKey("game.id", ondelete="CASCADE"), index=True)
+    # summary : règles simplifiées, beginner_guide : fiche pour débutants
+    kind: Mapped[str] = mapped_column(String(16))
+    content_md: Mapped[str] = mapped_column(Text)
+    # manual : écrit par l'utilisateur, ai_draft : brouillon généré
+    origin: Mapped[str] = mapped_column(String(8), default="manual")
+    reviewed: Mapped[bool] = mapped_column(default=True)
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), default=_now, onupdate=_now
+    )
+
+    game: Mapped["Game"] = relationship(back_populates="rule_sheets")
 
 
 class Tag(Base):
